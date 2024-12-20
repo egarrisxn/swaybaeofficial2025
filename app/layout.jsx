@@ -1,6 +1,6 @@
 import './globals.css'
-import {Poppins, Geist_Mono} from 'next/font/google'
 import {ThemeProvider} from './theme-provider'
+import {Poppins, Geist_Mono} from 'next/font/google'
 
 const poppins = Poppins({
   variable: '--font-poppins',
@@ -21,7 +21,7 @@ export const metadata = {
   description: 'The *NEW* site for full-time streamer & content creator, Sway Bae!',
 }
 
-export default function RootLayout({children}) {
+export default async function RootLayout({children}) {
   return (
     <html lang='en' suppressHydrationWarning>
       <body className={`${poppins.variable} ${geistMono.variable} scroll-smooth antialiased`}>

@@ -1,5 +1,5 @@
-import PagesHeader from '@/components/pages-header'
-import PagesFooter from '@/components/pages-footer'
+import PagesHeader from '@/components/(pages)/pages-header'
+import PagesFooter from '@/components/(pages)/pages-footer'
 
 export default function PagesLayout({children}) {
   return (

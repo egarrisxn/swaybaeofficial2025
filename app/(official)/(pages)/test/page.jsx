@@ -4,8 +4,8 @@ export const metadata = {
 
 export default function TestPage() {
   return (
-    <div className='min-h-screen pt-16 text-center'>
-      <h1>Test</h1>
+    <div className='mx-auto flex min-h-screen flex-col items-center py-12'>
+      <div className='my-12'>XXX</div>
     </div>
   )
 }

@@ -1,10 +1,11 @@
-import {CardStack} from '@/components/ui/card-stack'
-import {merch} from '@/lib/data'
+// import {NewCardStack} from '@/components/ui/new-card-stack'
 
-export function StackedCards() {
-  return (
-    <div className='grid w-full place-items-center'>
-      <CardStack items={merch} />
-    </div>
-  )
-}
+// //! Insure overflow-hidden is being used for mobile
+
+// export function StackedCards() {
+//   return (
+//     <div className='flex w-full items-center justify-center'>
+//       <NewCardStack />
+//     </div>
+//   )
+// }

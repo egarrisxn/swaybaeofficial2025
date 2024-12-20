@@ -1,6 +1,6 @@
 'use client'
 import {useRef} from 'react'
-import {AnimatePresence, motion, useInView} from 'framer-motion'
+import {AnimatePresence, motion, useInView} from 'motion/react'
 
 export function BlurFade({
   children,

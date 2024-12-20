@@ -1,6 +1,6 @@
 // "use client";
 // import { useState, useEffect, forwardRef } from "react";
-// import { MotionConfig, motion } from "framer-motion";
+// import { MotionConfig, motion } from "motion/react";
 
 // const HamburgerButton = forwardRef(({ onClick, open }, ref) => {
 //   return <AnimatedHamburgerButton ref={ref} onClick={onClick} open={open} />;

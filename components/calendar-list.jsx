@@ -19,7 +19,7 @@ export function GoogleCalendarList() {
         arg.jsEvent.preventDefault()
       }}
       initialView={'listMonth'}
-      contentHeight='400px'
+      contentHeight='500px'
       buttonIcons={{
         prev: 'chevron-left',
         next: 'chevron-right',

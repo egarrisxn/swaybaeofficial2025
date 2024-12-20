@@ -1,6 +1,17 @@
 import Image from 'next/image'
 import {BlurFade} from '@/components/ui/blur-fade'
-import {images} from '@/lib/data'
+
+const images = [
+  '/grid/1.jpg',
+  '/grid/2.jpg',
+  '/grid/3.jpg',
+  '/grid/4.jpg',
+  '/grid/5.jpg',
+  '/grid/6.jpg',
+  '/grid/7.jpg',
+  '/grid/8.jpg',
+  '/grid/9.jpg',
+]
 
 export function PhotoGrid() {
   return (

@@ -21,7 +21,7 @@ const buttonVariants = cva(
         pretty:
           'rounded-3xl border-none bg-gradient-to-br from-[#0075ff] via-[#00bfff] to-[#0075ff] bg-[length:280%_auto] text-white shadow-[0px_0px_20px_rgba(71,184,255,0.5),0px_5px_5px_-1px_rgba(58,125,233,0.25),inset_4px_4px_8px_rgba(175,230,255,0.5),inset_-4px_-4px_8px_rgba(19,95,216,0.35)] transition-all duration-100 hover:bg-[right_top]  focus:shadow-[0_0_0_3px_white,0_0_0_6px_#0075ff] focus:outline-none',
         bubble:
-          'border-2 ml-[-8px] border-black rounded-3xl text-black bg-white uppercase leading-relaxed transition-all hover:translate-x-1 hover:translate-y-1 active:translate-x-2 active:translate-y-2 shadow-[2px_2px_0px_black] hover:shadow-[1px_1px_0px_black] active:shadow-none dark:shadow-[2px_2px_0px_gray] dark:hover:shadow-[1px_1px_0px_gray]  dark:active:shadow-[0px_0px_0px_black]',
+          'border-2 border-black -ml-0.5 -mt-0.5 rounded-3xl text-black bg-white uppercase leading-relaxed transition-all hover:translate-x-0.5 hover:translate-y-0.5 active:translate-x-1 active:translate-y-1 shadow-[4px_4px_0px_black] hover:shadow-[1.5px_1.5px_0px_black] active:shadow-[0px_0px_0px_black] dark:shadow-[4px_4px_0px_grey] dark:hover:shadow-[1.5px_1.5px_0px_grey] dark:active:shadow-[0px_0px_0px_grey]',
       },
       size: {
         default: 'h-9 px-4 py-2',

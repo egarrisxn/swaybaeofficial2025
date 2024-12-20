@@ -2,7 +2,7 @@
 import {useState} from 'react'
 import {SendHorizonal} from 'lucide-react'
 import {Button} from '@/components/ui/button'
-import {SwaysButton} from './sways-button'
+import {CustomButton} from './custom-button'
 
 export function ContactForm() {
   const [formData, setFormData] = useState({
@@ -128,7 +128,7 @@ export function ContactForm() {
         />
       </Button>
       <div className='grid w-full place-items-center'>
-        <SwaysButton text={'Send Message'} />
+        <CustomButton text={'Send Message'} />
       </div>
     </form>
   )

@@ -3,13 +3,15 @@ import {cva} from 'class-variance-authority'
 import {cn} from '@/lib/utils'
 
 const backgroundVariants = cva(
-  'relative h-screen max-h-[2000px] w-full min-h-[500px] lg:min-h-[600px]',
+  'relative h-screen max-h-[2000px] h-screen w-full min-h-[500px] lg:min-h-[600px] overflow-hidden',
   {
     variants: {
       overlay: {
+        dark: 'before:absolute absolute before:inset-0 inset-0 before:bg-black bg-black before:opacity-50 opacity-50',
+        light:
+          'before:absolute absolute before:inset-0 inset-0 before:bg-white bg-white before:opacity-50 opacity-50',
+        both: 'before:absolute absolute before:inset-0 inset-0 before:bg-background bg-background before:opacity-50 opacity-50',
         none: '',
-        light: 'before:absolute before:inset-0 before:bg-white before:opacity-30',
-        dark: 'before:absolute before:inset-0 before:bg-black before:opacity-30',
       },
       type: {
         image: '',
@@ -23,19 +25,22 @@ const backgroundVariants = cva(
   },
 )
 
-const BackgroundMedia = ({variant = 'light', type = 'image', src, alt = ''}) => {
-  const mediaClasses = cn(backgroundVariants({overlay: variant, type}), 'overflow-hidden')
+const BackgroundMedia = ({variant = 'dark', type = 'video', src, alt = ''}) => {
+  const mediaClasses = cn(backgroundVariants({overlay: variant, type}))
 
   const renderMedia = () => {
     if (type === 'video') {
       return (
         <video
           aria-hidden='true'
-          muted
-          className='pointer-events-none absolute inset-0 h-full w-full object-fill transition-opacity duration-300'
           autoPlay
-          playsInline
+          className='pointer-events-none absolute inset-0 size-full object-fill transition-opacity duration-300'
           // loop
+          muted
+          playsInline
+          // style={{
+          //   maskImage: `linear-gradient(to top, transparent, black 2%)`,
+          // }}
         >
           <source src={src} type='video/mp4' />
           Your browser does not support the video tag.
@@ -44,10 +49,10 @@ const BackgroundMedia = ({variant = 'light', type = 'image', src, alt = ''}) => 
     } else {
       return (
         <Image
-          src={src}
           alt={alt}
-          className='absolute inset-0 h-full w-full object-cover'
+          className='absolute inset-0 size-full object-cover'
           loading='eager'
+          src={src}
         />
       )
     }
@@ -111,7 +116,7 @@ export {BackgroundMedia}
 //           ref={mediaRef}
 //           aria-hidden='true'
 //           muted
-//           className='pointer-events-none absolute inset-0 h-full w-full object-cover transition-opacity duration-300'
+//           className='pointer-events-none absolute inset-0 size-full object-cover transition-opacity duration-300'
 //           autoPlay
 //           playsInline
 //           loop
@@ -125,7 +130,7 @@ export {BackgroundMedia}
 //         <Image
 //           src={src}
 //           alt={alt}
-//           className='absolute inset-0 h-full w-full object-cover'
+//           className='absolute inset-0 size-full object-cover'
 //           loading='eager'
 //         />
 //       )

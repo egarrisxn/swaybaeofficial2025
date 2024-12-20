@@ -1,11 +1,11 @@
 'use client'
 import {useTheme} from 'next-themes'
 import {useCallback} from 'react'
-import {GiMoonBats, GiStripedSun} from 'react-icons/gi'
-import {Button} from './ui/button'
-import {Tooltip} from './ui/tooltip'
+import {GiMoonOrbit, GiStripedSun} from 'react-icons/gi'
+import {Button} from '@/components/ui/button'
+import {Tooltip} from '@/components/ui/tooltip'
 
-export function ThemeToggle() {
+export default function ThemeToggle() {
   const {resolvedTheme, setTheme} = useTheme()
   const handleToggleTheme = useCallback(() => {
     setTheme(resolvedTheme === 'light' ? 'dark' : 'light')
@@ -13,7 +13,7 @@ export function ThemeToggle() {
   return (
     <Button onClick={handleToggleTheme} variant='ghost' size='icon' aria-label='Toggle Theme'>
       <Tooltip direction='bottom' text={resolvedTheme === 'light' ? 'Dark' : 'Light'}>
-        {resolvedTheme === 'light' ? <GiMoonBats /> : <GiStripedSun />}
+        {resolvedTheme === 'light' ? <GiMoonOrbit /> : <GiStripedSun />}
       </Tooltip>
     </Button>
   )
@@ -22,3 +22,4 @@ export function ThemeToggle() {
 // import {GiMoon, GiSun} from 'react-icons/gi'
 // import {PiSunHorizonBold, PiSunHorizonFill} from 'react-icons/pi'
 // import {GiSunSpear, GiMoonOrbit} from 'react-icons/gi'
+// import {GiMoonBats, GiStripedSun} from 'react-icons/gi'
