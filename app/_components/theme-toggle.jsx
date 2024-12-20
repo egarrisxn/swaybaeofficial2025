@@ -1,6 +1,6 @@
 'use client'
-import {useTheme} from 'next-themes'
 import {useCallback} from 'react'
+import {useTheme} from 'next-themes'
 import {GiMoonOrbit, GiStripedSun} from 'react-icons/gi'
 import {Button} from '@/components/ui/button'
 import {Tooltip} from '@/components/ui/tooltip'

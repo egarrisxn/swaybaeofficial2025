@@ -1,15 +1,22 @@
 import Link from 'next/link'
-import CoverImage from './cover-image'
+import Image from 'next/image'
+import {urlFor} from '@/lib/sanity/client'
 import DateBadge from './date-badge'
 
 export default function TagCard({post}) {
   const {coverImage, title, excerpt, publishedAt, postSlug} = post
 
   return (
-    <div className='bg-w2b shadow-soft hover:shadow-hard grid grid-cols-1 gap-2 rounded-lg border-2 p-4 md:p-8 lg:grid-cols-6 lg:p-2 2xl:gap-6'>
+    <div className='grid grid-cols-1 gap-2 rounded-lg border-2 p-4 md:p-8 lg:grid-cols-6 lg:p-2 2xl:gap-6'>
       <div className='hidden lg:col-start-1 lg:col-end-3 lg:grid lg:p-4'>
         <Link href={`/blog/post/${postSlug}`}>
-          <CoverImage image={coverImage} priority />
+          <Image
+            className='rounded border-2 object-cover object-center p-1'
+            src={urlFor(coverImage.image).fit('max').auto('format').url()}
+            alt={coverImage.alt || 'Post Image'}
+            width={600}
+            height={200}
+          />
         </Link>
       </div>
       <div className='lg:col-start-3 lg:col-end-6 lg:grid'>
@@ -22,7 +29,7 @@ export default function TagCard({post}) {
               {title}
             </h2>
           </Link>
-          <p className='text-gray-fade line-clamp-3 leading-snug sm:text-base sm:leading-7 lg:text-lg xl:text-xl xl:leading-normal 2xl:text-2xl'>
+          <p className='tline-clamp-3 leading-snug sm:text-base sm:leading-7 lg:text-lg xl:text-xl xl:leading-normal 2xl:text-2xl'>
             {excerpt}
           </p>
         </div>

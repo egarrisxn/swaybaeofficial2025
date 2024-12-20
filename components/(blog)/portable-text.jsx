@@ -1,11 +1,8 @@
 import Image from 'next/image'
 import {Link, NextLink} from 'next/link'
 import {PortableText} from 'next-sanity'
-import {urlFor, resolveHref} from '@/lib/sanity/utils'
-
-const hrefResolver = ({internalLink}) => {
-  return resolveHref(internalLink._type, internalLink.slug?.current)
-}
+import {urlFor} from '@/lib/sanity/client'
+import {hrefResolver} from '@/lib/sanity/utils'
 
 export default function CustomPortableText({value, className}) {
   const components = {
@@ -87,7 +84,7 @@ export default function CustomPortableText({value, className}) {
             src={`https://www.youtube.com/embed/${value.video.id}`}
             allow='accelerometer; autoplay; clip2board-write; encrypted-media; gyroscope; picture-in-picture'
             allowfullscreen={true}
-            className='bg-light size-full rounded border-2 object-center p-2 shadow-md'
+            className='size-full rounded border-2 object-center p-2 shadow-md'
           ></iframe>
         </div>
       ),

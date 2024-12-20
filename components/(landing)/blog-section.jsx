@@ -26,36 +26,40 @@ export default function BlogSection() {
               Latest Blog Posts
             </h6>
             <div className='mt-2 border-b-2 pb-8 md:pb-4 lg:p-8'>
-              <div className='group flex flex-row justify-between gap-2 font-extralight tracking-widest md:text-lg'>
-                <div className='p-1'>
-                  <p>#2</p>
+              <Link href='/blog/post/the-best-free-ways-to-support-your-favorite-content-creators'>
+                <div className='group flex flex-row justify-between gap-2 font-extralight tracking-widest md:text-lg'>
+                  <div className='p-1'>
+                    <p>#2</p>
+                  </div>
+                  <div className='flex-1 p-1 group-hover:underline group-hover:underline-offset-4'>
+                    <p>The best FREE Ways to Support Your Favorite Content Creators!</p>
+                  </div>
+                  <div className='flex items-center p-1'>
+                    <MoveRight
+                      size={16}
+                      className='-translate-x-1 transition-all duration-300 ease-out group-hover:translate-x-1 group-hover:scale-x-105'
+                    />
+                  </div>
                 </div>
-                <div className='flex-1 p-1 group-hover:underline group-hover:underline-offset-4'>
-                  <p>The best FREE Ways to Support Your Favorite Content Creators!</p>
-                </div>
-                <div className='flex items-center p-1'>
-                  <MoveRight
-                    size={16}
-                    className='-translate-x-1 transition-all duration-300 ease-out group-hover:translate-x-1 group-hover:scale-x-105'
-                  />
-                </div>
-              </div>
+              </Link>
             </div>
             <div className='mt-2 border-b-2 pb-8 md:pb-4 lg:p-8'>
-              <div className='group flex flex-row justify-between gap-2 font-extralight tracking-widest md:text-lg'>
-                <div className='p-1'>
-                  <p>#1</p>
+              <Link href='/blog/post/sway-starts-a-blog'>
+                <div className='group flex flex-row justify-between gap-2 font-extralight tracking-widest md:text-lg'>
+                  <div className='p-1'>
+                    <p>#1</p>
+                  </div>
+                  <div className='flex-1 p-1 group-hover:underline group-hover:underline-offset-4'>
+                    <p>Sway Starts a BLOG!</p>
+                  </div>
+                  <div className='flex items-center p-1'>
+                    <MoveRight
+                      size={16}
+                      className='-translate-x-1 transition-all duration-300 ease-out group-hover:translate-x-1 group-hover:scale-x-105'
+                    />
+                  </div>
                 </div>
-                <div className='flex-1 p-1 group-hover:underline group-hover:underline-offset-4'>
-                  <p>Sway Starts a BLOG!</p>
-                </div>
-                <div className='flex items-center p-1'>
-                  <MoveRight
-                    size={16}
-                    className='-translate-x-1 transition-all duration-300 ease-out group-hover:translate-x-1 group-hover:scale-x-105'
-                  />
-                </div>
-              </div>
+              </Link>
             </div>
             <div className='mt-8 flex flex-col items-center justify-center gap-4'>
               <CustomButton text={'Read More!'} />

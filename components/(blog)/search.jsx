@@ -5,7 +5,7 @@ import {useState, useEffect} from 'react'
 import {useDebouncedCallback} from 'use-debounce'
 import {SEARCH_QUERY} from '@/lib/sanity/queries'
 import {client} from '@/lib/sanity/client'
-import {Icon} from './ui/icon'
+import {Icon} from '../ui/icon'
 
 export default function Search({placeholder}) {
   const searchParams = useSearchParams()
@@ -67,13 +67,13 @@ export default function Search({placeholder}) {
 
   return (
     <div className='relative z-20'>
-      <div className='border-gray-light focus:border-3 shadow-soft hover:shadow-hard flex items-center space-x-2 rounded-md border-2 bg-background p-2'>
+      <div className='focus:border-3 flex items-center space-x-2 rounded-md border-2 bg-background p-2'>
         <label htmlFor='search' className='sr-only'>
           Search
         </label>
         <input
           id='search'
-          className='placeholder:text-gray-light w-40 appearance-none bg-background outline-none sm:w-auto'
+          className='w-40 appearance-none bg-background outline-none placeholder:text-black sm:w-auto'
           placeholder={placeholder}
           onChange={handleChange}
           value={searchTerm}
@@ -82,7 +82,7 @@ export default function Search({placeholder}) {
       </div>
       {searchResults.length > 0 && (
         <div className='absolute left-0 top-full my-1 w-full overflow-y-auto rounded-md border tracking-tight shadow 2xl:text-base'>
-          <p className='text-w2b rounded-t bg-[#000000] bg-opacity-80 text-center font-semibold dark:bg-[#ffffff]'>
+          <p className='rounded-t bg-[#000000] bg-opacity-80 text-center font-semibold dark:bg-[#ffffff]'>
             Search Results
           </p>
           <hr />
@@ -90,7 +90,7 @@ export default function Search({placeholder}) {
             {searchResults.map((result) => (
               <li
                 key={result._id}
-                className='odd:bg-light-tint even:bg-gray-fade dark:odd:bg-dark-fade dark:even:bg-neutral inline-flex w-full justify-start transition ease-in-out'
+                className='inline-flex w-full justify-start transition ease-in-out'
               >
                 <Link
                   href={`/blog/post/${result.slug.current}`}

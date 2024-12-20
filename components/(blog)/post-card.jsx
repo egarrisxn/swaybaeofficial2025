@@ -1,9 +1,9 @@
 'use client'
 import Link from 'next/link'
 import Image from 'next/image'
+import {urlFor} from '@/lib/sanity/client'
 import TagBadge from './tag-badge'
 import DateBadge from './date-badge'
-import {urlFor} from '@/lib/sanity/utils'
 
 export default function PostCard({post, isFeatured = false}) {
   const {_id, coverImage, title, excerpt, tags, publishedAt, postSlug} = post
@@ -18,7 +18,7 @@ export default function PostCard({post, isFeatured = false}) {
       >
         <Link href={`/blog/post/${postSlug}`}>
           <Image
-            className='bg-light shadow-soft rounded border-2 object-cover object-center p-1'
+            className='rounded border-2 object-cover object-center p-1'
             src={urlFor(coverImage.image).fit('max').auto('format').url()}
             alt={coverImage.alt}
             width={1000}
@@ -42,17 +42,15 @@ export default function PostCard({post, isFeatured = false}) {
           <Link href={`/blog/post/${postSlug}`}>
             <h3
               className={`${
-                isFeatured
-                  ? '3xl:text-4xl text-2xl font-semibold md:text-3xl'
-                  : '3xl:text-2xl text-xl font-bold'
+                isFeatured ? 'text-2xl font-semibold md:text-3xl' : 'text-xl font-bold'
               } leading-tight tracking-tighter hover:underline`}
             >
               {title}
             </h3>
           </Link>
           <p
-            className={`text-gray-fade ${
-              isFeatured ? '3xl:text-2xl text-lg font-medium md:text-xl' : '3xl:text-xl text-lg'
+            className={`text-slate-3-- ${
+              isFeatured ? 'text-lg font-medium md:text-xl' : 'text-lg'
             } tracking-tight`}
           >
             {excerpt}
