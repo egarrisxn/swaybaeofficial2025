@@ -65,12 +65,8 @@ module.exports = {
           },
         },
         cloud: {
-          from: {
-            transform: 'translateX(0)',
-          },
-          to: {
-            transform: 'translateX(calc(-100% - 4rem))',
-          },
+          from: {transform: 'translateX(0)'},
+          to: {transform: 'translateX(calc(-100% - 4rem))'},
         },
         marquee: {
           from: {transform: 'translateX(0)'},
@@ -80,9 +76,13 @@ module.exports = {
           from: {transform: 'translateY(0)'},
           to: {transform: 'translateY(calc(-100% - var(--gap)))'},
         },
-        fadeIn: {
+        fade: {
           from: {opacity: '0'},
           to: {opacity: '1'},
+        },
+        fizzle: {
+          '0%': {opacity: 0, transform: 'translateY(8px)'},
+          '100%': {opacity: 1, transform: 'translateY(0)'},
         },
       },
       animation: {
@@ -90,7 +90,8 @@ module.exports = {
         cloud: 'cloud 30s linear infinite',
         marquee: 'marquee var(--duration) linear infinite',
         marqueevertical: 'marqueevertical var(--duration) linear infinite',
-        fadeIn: 'fadeIn 0.5s ease-in',
+        fade: 'fade 0.5s ease-in',
+        fizzle: 'fizzle 0.3s ease-in-out forwards',
       },
     },
   },

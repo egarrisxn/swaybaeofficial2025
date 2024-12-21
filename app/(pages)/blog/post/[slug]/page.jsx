@@ -1,9 +1,10 @@
 import Image from 'next/image'
+import Link from 'next/link'
 import {notFound} from 'next/navigation'
+import {ChevronLeft, MoveLeft} from 'lucide-react'
 import {generateStaticSlugs} from '@/lib/sanity/generateStaticSlugs'
 import {loadPost} from '@/lib/sanity/loadQuery'
 import {urlFor} from '@/lib/sanity/client'
-import PageHeader from '@/components/(blog)/page-header'
 import TableOfContent from '@/components/(blog)/table-of-content'
 import TagBadge from '@/components/(blog)/tag-badge'
 import DateBadge from '@/components/(blog)/date-badge'
@@ -30,54 +31,68 @@ const PostSlug = ({post}) => {
   if (!post) return null
 
   return (
-    <>
-      <PageHeader id='post' showSearch={true} showLink={true} linkHref='/blog' linkText='Back' />
-      <article className='mx-auto mb-4 mt-12 grid max-w-7xl grid-cols-1 sm:px-4 lg:mt-20 lg:grid-cols-12 lg:pr-6 xl:pr-10'>
-        <aside className='col-start-1 col-end-2 hidden lg:sticky lg:top-[2rem] lg:block lg:h-screen lg:pt-12'>
-          <TableOfContent headings={headings} />
+    <div className='mx-auto flex min-h-screen flex-col items-center border-2 py-12'>
+      <div className='my-12'>
+        <aside>
+          <div className='fixed left-auto right-[2rem] top-[10rem] mt-0 hidden h-full w-48 justify-start space-y-4 transition lg:left-[1.5rem] lg:top-[8rem] xl:right-auto xl:top-[10rem] xl:block 2xl:left-[8rem]'>
+            <div className='flex flex-row'>
+              <Link
+                href={'/blog'}
+                className='text-bold group flex cursor-pointer items-center gap-2 text-muted-foreground hover:text-primary'
+              >
+                <ChevronLeft className='ml-1 size-4 transition group-hover:-translate-x-1' />{' '}
+                <span>Go Back</span>
+              </Link>
+            </div>
+          </div>
         </aside>
-        <div className='col-start-2 col-end-13 mx-auto grid sm:gap-2'>
-          <DateBadge publishedAt={publishedAt} />
-          <section className='mb-2 mt-8 flex items-center justify-between text-center'>
-            <h1 className='scroll-m-20 pb-2 text-xl font-extrabold leading-tight tracking-tight first:mt-0 sm:text-3xl md:text-4xl lg:text-5xl'>
-              {title}
-            </h1>
-            <div className='hidden gap-1 lg:flex lg:justify-end'>
-              {tags.map((tag) => (
-                <div key={tag._id}>
-                  <TagBadge tag={tag} />
-                </div>
-              ))}
+        <article className='mb-4 mt-12 grid max-w-4xl grid-cols-1 px-2 sm:px-4 lg:mt-20 lg:px-8 2xl:max-w-6xl'>
+          <section className='space-y-2 py-4'>
+            <Link
+              href={'/'}
+              className='text-bold group mb-4 flex cursor-pointer items-center gap-2 text-muted-foreground hover:text-primary xl:hidden'
+            >
+              <MoveLeft className='ml-1 size-4 transition group-hover:-translate-x-1' />{' '}
+              <span className='text-sm'>Back Home</span>
+            </Link>
+            <h1 className='mb-2.5 text-lg font-medium lg:leading-[1.1] xl:text-xl'>{title}</h1>
+            <div className='flex flex-wrap items-center space-x-1.5 text-sm text-muted-foreground'>
+              <DateBadge publishedAt={publishedAt} />
+              <div className='text-[0.6rem]'>•</div>
+              <div>4 minute read</div>
             </div>
           </section>
-          <section className='mt-1 flex max-[300px]:max-w-60 min-[300px]:mx-auto'>
+          <section className='mt-2 flex max-[300px]:max-w-60'>
             <Image
-              className='w-full rounded border-2 bg-white object-cover object-center p-2'
               src={urlFor(coverImage.image).fit('max').auto('format').url()}
               alt={coverImage.alt || 'Cover Image'}
-              width={1000}
-              height={300}
+              width={820}
+              height={310}
+              className='w-full rounded border-2 bg-white object-cover object-center p-2'
             />
           </section>
           <section className='mb-6 mt-8 flex max-[300px]:max-w-60 sm:mt-10 md:mt-12 lg:mt-14 xl:mt-16'>
-            <div className='prose-a:text-blue hover:prose-a:text-blue-tint prose-code:text-pink prose-th:bg-blue-tint prose-img:shadow-soft hover:prose-img:shadow-hard prose prose-slate mx-auto transition-all ease-in-out md:prose-base lg:prose-lg xl:prose-2xl dark:prose-invert prose-h1:text-primary prose-h2:text-secondary prose-h3:text-primary prose-h4:text-secondary prose-blockquote:border-primary prose-blockquote:text-secondary prose-ol:list-outside prose-ul:list-outside prose-li:leading-normal prose-li:tracking-tight prose-li:marker:text-primary prose-th:text-xl prose-img:w-full'>
+            {/* <div className='prose-a:text-blue hover:prose-a:text-blue-tint prose-code:text-pink prose-th:bg-blue-tint prose-img:shadow-soft hover:prose-img:shadow-hard prose prose-slate mx-auto transition-all ease-in-out md:prose-base lg:prose-lg xl:prose-2xl dark:prose-invert prose-h1:text-primary prose-h2:text-secondary prose-h3:text-primary prose-h4:text-secondary prose-blockquote:border-primary prose-blockquote:text-secondary prose-ol:list-outside prose-ul:list-outside prose-li:leading-normal prose-li:tracking-tight prose-li:marker:text-primary prose-th:text-xl prose-img:w-full'> */}
+            <div className='prose prose-slate w-full transition-all ease-in-out md:prose-base lg:prose-lg xl:prose-xl 2xl:prose-2xl dark:prose-invert prose-a:text-blue-500 hover:prose-a:text-blue-600 prose-blockquote:border-primary prose-ol:list-outside prose-ul:list-outside prose-li:leading-normal prose-li:tracking-tight prose-img:w-full prose-img:shadow hover:prose-img:shadow-sm'>
               <CustomPortableText value={content} />
             </div>
           </section>
+        </article>
+        <div className='flex max-w-4xl flex-row items-center justify-start px-2 max-[300px]:max-w-60 sm:px-4 lg:px-8 2xl:max-w-6xl'>
+          <p className='pb-2 font-semibold md:pb-0 md:pr-2'>Tags:</p>
+          <div className='flex flex-row gap-2'>
+            {tags.map((tag) => (
+              <div key={tag._id}>
+                <TagBadge tag={tag} />
+              </div>
+            ))}
+          </div>
+
+          <aside>
+            <TableOfContent headings={headings} />
+          </aside>
         </div>
-      </article>
-      <div className='mb-16 flex max-w-5xl flex-col items-center justify-center max-[300px]:max-w-60 min-[300px]:mx-auto md:flex-row lg:mb-20'>
-        <hr className='mb-4 w-full rounded-lg border md:mb-0' />
-        <p className='pb-2 font-semibold md:pb-0 md:pr-2'>Tags:</p>
-        <div className='flex items-center justify-center gap-2'>
-          {tags.map((tag) => (
-            <div key={tag._id}>
-              <TagBadge tag={tag} />
-            </div>
-          ))}
-        </div>
-        <hr className='mt-4 w-full rounded-lg border md:mt-0' />
       </div>
-    </>
+    </div>
   )
 }

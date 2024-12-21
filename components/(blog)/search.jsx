@@ -67,7 +67,7 @@ export default function Search({placeholder}) {
 
   return (
     <div className='relative z-20'>
-      <div className='focus:border-3 flex items-center space-x-2 rounded-md border-2 bg-background p-2'>
+      <div className='flex items-center space-x-2 rounded-md border-2 bg-background p-2'>
         <label htmlFor='search' className='sr-only'>
           Search
         </label>

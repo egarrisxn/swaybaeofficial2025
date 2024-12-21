@@ -21,7 +21,7 @@ export function CustomButton({text}) {
 
   return (
     <button
-      className='relative w-full max-w-lg transform overflow-hidden rounded-lg border bg-[#e5e7eb] transition-transform ease-in-out active:scale-90'
+      className='relative w-40 transform overflow-hidden rounded-lg border bg-[#e5e7eb] transition-transform ease-in-out active:scale-90'
       ref={ref}
     >
       <span
@@ -31,7 +31,7 @@ export function CustomButton({text}) {
           top: mousePosition.y,
         }}
       ></span>
-      <div className='relative z-10 m-[2px] rounded-[calc(0.5rem-1px)] bg-white/90 py-3 text-sm font-medium text-[#fb3be1] backdrop-blur-sm'>
+      <div className='relative z-10 m-[2px] rounded-[calc(0.5rem-1px)] bg-white/90 py-2 text-sm font-medium text-[#fb3be1] backdrop-blur-sm'>
         {text}
       </div>
     </button>

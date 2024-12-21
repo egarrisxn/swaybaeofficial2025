@@ -1,14 +1,14 @@
 import Link from 'next/link'
 import {Badge} from '@/components/ui/badge'
 
-export default function TagBadge({tag, clickable = true}) {
+export default function TagBadge({tag, clickable = true, noColor = false}) {
   const {title, color} = tag
 
   const tagContent = (
     <Badge
-      variant='tag'
+      variant='outline'
       style={{
-        backgroundColor: color,
+        backgroundColor: noColor ? 'transparent' : color,
       }}
     >
       {title}

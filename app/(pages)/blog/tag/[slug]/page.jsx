@@ -25,19 +25,21 @@ const TagSlug = ({tag}) => {
   if (!tag) return null
 
   return (
-    <>
-      <PageHeader id='tags' showSearch={true} showLink={true} linkHref='/blog' linkText='Back' />
-      <div className='mx-auto mb-4 mt-12 max-w-7xl sm:px-4 lg:my-20 lg:px-6 xl:px-10'>
-        <h3 className='mb-2 ml-1 text-2xl font-bold sm:text-3xl'>
-          <span className='mr-1 text-xl'>&#9684;</span>
+    <div className='mx-auto flex min-h-screen flex-col items-center border-2 py-12'>
+      <div className='mx-auto my-12 max-w-[100rem]'>
+        <PageHeader id='tags' showSearch={true} showLink={true} linkHref='/blog' linkText='Back' />
+        <h2 className='my-12 max-w-3xl px-4 text-5xl font-medium leading-none tracking-tighter'>
           {title}
-        </h3>
-        <div className='mt-8 grid grid-cols-1 gap-8 pb-16'>
-          {posts.map((post) => (
-            <TagCard key={post._id} post={post} />
-          ))}
+        </h2>
+        <hr className='mb-12' />
+        <div className='mx-auto mb-4 mt-8 grid grid-cols-1 gap-8 px-4'>
+          <div className='grid grid-cols-1 gap-8'>
+            {posts.map((post) => (
+              <TagCard key={post._id} post={post} />
+            ))}
+          </div>
         </div>
       </div>
-    </>
+    </div>
   )
 }

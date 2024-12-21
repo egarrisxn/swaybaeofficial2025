@@ -2,7 +2,6 @@
 import {useState} from 'react'
 import {SendHorizonal} from 'lucide-react'
 import {Button} from '@/components/ui/button'
-import {CustomButton} from './custom-button'
 
 export function ContactForm() {
   const [formData, setFormData] = useState({
@@ -127,9 +126,6 @@ export function ContactForm() {
           className='-translate-x-1 transition-all duration-300 ease-out group-hover:translate-x-1 group-hover:scale-x-105'
         />
       </Button>
-      <div className='grid w-full place-items-center'>
-        <CustomButton text={'Send Message'} />
-      </div>
     </form>
   )
 }

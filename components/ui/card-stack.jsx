@@ -50,7 +50,7 @@ export function CardStack() {
   }, [handleSwipeComplete])
 
   return (
-    <div className='relative h-96 w-72 border-2 sm:h-[30rem] sm:w-96'>
+    <div className='relative h-96 w-72 sm:h-[30rem] sm:w-96'>
       {stack.map((card, index) => {
         const isTopCard = index === 0
         const scaleFactor = 1 - index * 0.03

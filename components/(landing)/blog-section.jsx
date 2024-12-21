@@ -2,15 +2,14 @@ import Link from 'next/link'
 import Image from 'next/image'
 import {MoveRight} from 'lucide-react'
 import {Button} from '@/components/ui/button'
-import {CustomButton} from '@/components/custom-button'
 
 export default function BlogSection() {
   return (
     <section className='border-4 border-white pt-12 dark:border-black'>
-      <div className='container mx-auto mt-24 max-w-7xl border-2 px-4 lg:mt-0'>
-        <div className='grid grid-cols-1 gap-6 md:grid-cols-2'>
+      <div className='container mx-auto mt-24 max-w-7xl px-4 xl:px-0'>
+        <div className='grid grid-cols-1 gap-6 md:grid-cols-2 xl:gap-12 2xl:gap-16'>
           {/* Image Section */}
-          <aside className='relative order-2 flex justify-center border-2 pt-12 md:order-1 md:justify-end'>
+          <aside className='relative order-2 flex justify-center md:order-1 md:justify-end'>
             <Image
               src='/images/blogpicture.png'
               alt='Another cutout photo of Sway'
@@ -21,7 +20,7 @@ export default function BlogSection() {
           </aside>
 
           {/* Text Section */}
-          <article className='order-1 flex flex-col gap-3 border-2 p-4 md:order-2 md:mb-24 md:gap-6 md:pt-24 lg:mb-0'>
+          <article className='order-1 flex flex-col gap-3 p-4 md:order-2 md:mb-24 md:gap-6 md:pt-24 lg:mb-0'>
             <h6 className='text-center font-semibold uppercase tracking-wide text-gray-700 md:text-start lg:text-center dark:text-neutral-100'>
               Latest Blog Posts
             </h6>
@@ -61,9 +60,8 @@ export default function BlogSection() {
                 </div>
               </Link>
             </div>
-            <div className='mt-8 flex flex-col items-center justify-center gap-4'>
-              <CustomButton text={'Read More!'} />
-              <Button asChild variant='bubble' size='md'>
+            <div className='mt-16 flex items-center justify-center'>
+              <Button asChild variant='bubble' size='fat'>
                 <Link href='/blog'>Read More!</Link>
               </Button>
             </div>

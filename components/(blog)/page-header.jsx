@@ -1,5 +1,6 @@
 import Link from 'next/link'
 import {Icon} from '@/components/ui/icon'
+import {ChevronLeft} from 'lucide-react'
 import Search from './search'
 
 export default function PageHeader({
@@ -14,34 +15,37 @@ export default function PageHeader({
 }) {
   return (
     <div
-      className={`mx-auto w-full pt-4 md:pt-12 lg:px-4 lg:pt-16 ${
-        showSearch ? 'flex flex-row items-center justify-between gap-2' : 'block'
-      } ${className} ${showSearch ? 'max-[360px]:flex-col max-[360px]:justify-center' : ''}`}
+      className={`mx-auto w-full px-2 pt-4 md:pt-12 lg:px-4 lg:pt-16 ${
+        showSearch ? 'flex flex-row items-center justify-end gap-2 sm:justify-between' : 'block'
+      } ${className} ${showSearch ? '' : ''}`}
     >
-      {showHr && <hr className='border-gray-fade rounded-lg border' />}
+      {showHr && <hr className='rounded-lg border' />}
 
       {showLink && (
-        <Link href={linkHref}>
-          <div className='3xl:ml-3 3xl:mt-6 3xl:gap-1 flex flex-row items-center gap-0.5 sm:ml-2'>
-            <Icon.Undo2 />
-            <h1
+        <div className='ml-2 hidden flex-row items-center gap-0.5 sm:flex'>
+          <Link
+            href={linkHref}
+            className='text-bold group flex cursor-pointer items-center gap-2 text-muted-foreground hover:text-primary'
+          >
+            <ChevronLeft className='ml-1 size-6 transition group-hover:-translate-x-1' />{' '}
+            <span
               id={id}
-              className={`from-purple via-pink-tint to-pink-fade 3xl:text-3xl bg-gradient-to-tr bg-clip-text text-xl uppercase tracking-widest text-transparent`}
               aria-label={linkText}
+              className={`text-lg tracking-widest`}
+              // className={`bg-gradient-to-tr from-purple-500 via-pink-500 to-pink-200 bg-clip-text text-xl uppercase tracking-widest text-transparent`}
             >
               {linkText}
-            </h1>
-          </div>
-        </Link>
+            </span>
+          </Link>
+        </div>
       )}
 
       {!showLink && (
-        <h1
-          id={id}
-          className={`from-purple via-pink-tint to-pink-fade 3xl:ml-3 3xl:mt-6 3xl:text-3xl bg-gradient-to-tr bg-clip-text text-xl uppercase tracking-widest text-transparent`}
-        >
-          {children}
-        </h1>
+        <div className='ml-2 hidden items-center sm:flex'>
+          <span id={id} className={`text-lg tracking-widest`}>
+            {children}
+          </span>
+        </div>
       )}
 
       {showSearch && <Search placeholder='Search..' />}

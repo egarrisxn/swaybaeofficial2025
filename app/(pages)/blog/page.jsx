@@ -12,14 +12,17 @@ export default async function BlogPage(props) {
   }
 
   return (
-    <>
-      <PageHeader id='blog' showSearch={true} showLink={false}>
-        Blog
-      </PageHeader>
-
-      <div className='mx-auto mb-4 mt-12 max-w-7xl sm:px-4 lg:my-20 lg:px-6 xl:px-10'>
-        <AllPosts posts={initial.data} />
+    <div className='mx-auto flex min-h-screen flex-col items-center border-2 py-12'>
+      <div className='mx-auto my-12 max-w-[100rem]'>
+        <PageHeader id='tags' showSearch={true} showLink={true} linkHref='/' linkText='Home' />
+        <h2 className='my-12 max-w-3xl px-4 text-5xl font-medium leading-none tracking-tighter'>
+          Welcome to my blog, where I write about things and stuff!
+        </h2>
+        <hr className='mb-12' />
+        <div className='mx-auto mb-4 px-4'>
+          <AllPosts posts={initial.data} />
+        </div>
       </div>
-    </>
+    </div>
   )
 }
