@@ -60,7 +60,7 @@ export function ContactForm() {
   }
   return (
     <form
-      className='w-full space-y-4 sm:space-y-2 md:space-y-4 lg:space-y-6'
+      className='w-full space-y-4 sm:space-y-2 md:space-y-4 lg:space-y-6 xl:space-y-8'
       onSubmit={handleSubmit}
     >
       <label htmlFor='name' className='sr-only'>
@@ -119,7 +119,7 @@ export function ContactForm() {
         className='3xl:text-2xl flex min-h-[80px] w-full rounded-md border bg-white px-3 py-2 text-black shadow ring-offset-background focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary focus-visible:ring-offset-2 disabled:cursor-not-allowed disabled:opacity-50 xl:text-base'
         required
       />
-      <Button variant='pretty' size='xl' type='submit' className='group'>
+      <Button variant='shimmer' size='xl' type='submit' className='group'>
         <span>Send Message</span>
         <SendHorizonal
           size={16}

@@ -1,7 +1,7 @@
 export const SocialCard = ({title, subtitle, Icon, href}) => {
   return (
     <a
-      className='border-1 group relative min-w-28 overflow-hidden rounded-md border-slate-300 bg-white px-2 py-3 shadow-md drop-shadow-sm sm:min-w-32 lg:min-w-40 lg:px-4 lg:py-6 xl:min-w-48'
+      className='group relative min-w-28 overflow-hidden rounded-md border-2 border-slate-300 bg-white px-2 py-3 shadow-lg drop-shadow-sm sm:min-w-32 lg:min-w-40 lg:px-4 lg:py-6 xl:min-w-48'
       href={href}
       rel='noopener noreferrer'
       target='_blank'

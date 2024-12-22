@@ -33,7 +33,7 @@ export default function AllPosts({posts}) {
             {posts.slice(0, loadMore).map((post, index) => (
               <div
                 key={post._id}
-                className={`animate-fizzle translate-y-2 opacity-0 transition-opacity duration-300 ease-in-out`}
+                className={`translate-y-2 animate-fizzle opacity-0 transition-opacity duration-300 ease-in-out`}
                 style={{animationDelay: `${index * 100}ms`}}
               >
                 <PostCard post={post} noTagColor={true} />
@@ -42,7 +42,7 @@ export default function AllPosts({posts}) {
           </section>
           <div className='mt-16 flex justify-center p-4'>
             {posts.length > loadMore ? (
-              <Button variant='pretty' size='sm' type='button' onClick={showMoreArticles}>
+              <Button variant='shimmer' size='xs' type='button' onClick={showMoreArticles}>
                 Load more posts.
               </Button>
             ) : (

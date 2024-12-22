@@ -48,7 +48,7 @@ export const socials = [
 
 export function LandingFooter() {
   return (
-    <footer className='w-full border-t dark:border-foreground'>
+    <footer className='w-full'>
       <div className='grid grid-cols-1 place-items-center gap-4 p-8 md:gap-6'>
         <section className='flex w-full flex-row items-center justify-center md:justify-end'>
           <ScrollToTop />
@@ -78,7 +78,7 @@ export function LandingFooter() {
 
 export function PagesFooter() {
   return (
-    <footer className='w-full border-t dark:border-foreground'>
+    <footer className='w-full border-t border-white dark:border-black'>
       <div className='grid grid-cols-1 place-items-center gap-4 p-8 md:grid-cols-2 md:gap-0'>
         <section className='order-2 w-full text-center md:text-start lg:order-1'>
           <p className='bg-gradient-to-bl from-primary to-secondary bg-clip-text font-semibold tracking-tight text-transparent'>

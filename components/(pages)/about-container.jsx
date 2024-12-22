@@ -19,39 +19,42 @@ export function AboutContainer() {
         {/* Text & Image Section */}
         <section className='grid grid-cols-1 gap-6 md:grid-cols-2'>
           <article className='prose border-2'>
-            <h1>So Who Am I?</h1>
-            <h2>I&apos;m Sway!</h2>
-            <p>
-              I&apos;m a Full-Time Content Creator, currently partnered with Twitch and YouTube,
-              streaming and releasing videos throughout the week.
-            </p>
-            <p>
-              <span className='font-semibold'>I create</span> family-friendly entertainment centered
-              around the concepts of positive mental attitude in gaming with the mantra of leaving
-              someone&apos;s day better than I found it. My favorite part of streaming is the
-              amazing community. You can find our Discord as you explore the website, but it is a
-              very inclusive and supportive community that we have cultivated and a great place to
-              connect outside of streams!
-            </p>
-            <p>
-              <span className='font-semibold'>In addition,</span> I am primarily a Hearthstone
-              streamer, with a focus on Battlegrounds. I also enjoy Strategy games in general,
-              Survival games, Indie games, Simulator games, Roguelike games, Platformers, and many
-              more!
-            </p>
-            <p>
-              <span className='font-semibold'>Did I ever</span> imagine this would be my lifestyle,
-              even five years ago? Nope. Do I love it? Entirely!
-            </p>
-            <p>
-              <span className='font-semibold'>If you&apos;d like</span> to work with me, I&apos;d
-              love to hear from you! You can use the contact form in the business inquiries section
-              below! As I often say, thank you for being a part of my journey, and allowing me to be
-              a part of yours!
-            </p>
+            <h2 className='bg-gradient-to-t from-neutral-700 to-neutral-800 bg-clip-text text-transparent dark:from-stone-200 dark:to-neutral-200'>
+              So Who Am I?
+            </h2>
+            <div className='text-gray-700 dark:text-gray-300'>
+              <p>
+                I&apos;m a Full-Time Content Creator, currently partnered with Twitch and YouTube,
+                streaming and releasing videos throughout the week.
+              </p>
+              <p>
+                <span className='font-semibold'>I create</span> family-friendly entertainment
+                centered around the concepts of positive mental attitude in gaming with the mantra
+                of leaving someone&apos;s day better than I found it. My favorite part of streaming
+                is the amazing community. You can find our Discord as you explore the website, but
+                it is a very inclusive and supportive community that we have cultivated and a great
+                place to connect outside of streams!
+              </p>
+              <p>
+                <span className='font-semibold'>In addition,</span> I am primarily a Hearthstone
+                streamer, with a focus on Battlegrounds. I also enjoy Strategy games in general,
+                Survival games, Indie games, Simulator games, Roguelike games, Platformers, and many
+                more!
+              </p>
+              <p>
+                <span className='font-semibold'>Did I ever</span> imagine this would be my
+                lifestyle, even five years ago? Nope. Do I love it? Entirely!
+              </p>
+              <p>
+                <span className='font-semibold'>If you&apos;d like</span> to work with me, I&apos;d
+                love to hear from you! You can use the contact form in the business inquiries
+                section below! As I often say, thank you for being a part of my journey, and
+                allowing me to be a part of yours!
+              </p>
+            </div>
           </article>
 
-          <aside className='flex justify-center border-2 md:justify-end'>
+          <aside className='flex items-center justify-center border-2 md:justify-end'>
             <Image
               src='/grid/1.jpg'
               alt='A cutout photo of Sway'

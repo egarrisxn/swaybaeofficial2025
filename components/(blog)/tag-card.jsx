@@ -33,7 +33,7 @@ export default function TagCard({post}) {
         </div>
         <div className='mt-1 flex h-full flex-col justify-between'>
           <div className='flex items-start justify-start'>
-            <p className='mb-4 line-clamp-5 max-w-2xl font-light leading-normal tracking-normal text-gray-600 lg:line-clamp-3 xl:line-clamp-4 xl:text-lg 2xl:mb-3 2xl:line-clamp-6 dark:text-gray-400'>
+            <p className='mb-4 line-clamp-5 max-w-2xl font-light leading-normal tracking-normal text-gray-700 lg:line-clamp-3 xl:line-clamp-4 xl:text-lg 2xl:mb-3 2xl:line-clamp-6 dark:text-gray-300'>
               {excerpt}
             </p>
           </div>

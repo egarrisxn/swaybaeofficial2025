@@ -5,9 +5,9 @@ import {useState, useEffect} from 'react'
 import {useDebouncedCallback} from 'use-debounce'
 import {SEARCH_QUERY} from '@/lib/sanity/queries'
 import {client} from '@/lib/sanity/client'
-import {Icon} from '../ui/icon'
+import {Search as SearchIcon} from 'lucide-react'
 
-export default function Search({placeholder}) {
+export default function SearchBar({placeholder}) {
   const searchParams = useSearchParams()
   const pathname = usePathname()
   const {replace} = useRouter()
@@ -67,18 +67,18 @@ export default function Search({placeholder}) {
 
   return (
     <div className='relative z-20'>
-      <div className='flex items-center space-x-2 rounded-md border-2 bg-background p-2'>
+      <div className='flex items-center space-x-2 rounded-md border-2 border-foreground/50 bg-background p-2 shadow-lg'>
         <label htmlFor='search' className='sr-only'>
           Search
         </label>
         <input
           id='search'
-          className='w-40 appearance-none bg-background outline-none placeholder:text-black sm:w-auto'
+          className='w-40 appearance-none bg-background outline-none sm:w-auto'
           placeholder={placeholder}
           onChange={handleChange}
           value={searchTerm}
         />
-        <Icon.Search />
+        <SearchIcon size={16} strokeWidth={2.25} />
       </div>
       {searchResults.length > 0 && (
         <div className='absolute left-0 top-full my-1 w-full overflow-y-auto rounded-md border tracking-tight shadow 2xl:text-base'>

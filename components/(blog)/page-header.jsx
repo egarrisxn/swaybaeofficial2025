@@ -1,7 +1,6 @@
 import Link from 'next/link'
-import {Icon} from '@/components/ui/icon'
 import {ChevronLeft} from 'lucide-react'
-import Search from './search'
+import SearchBar from './search-bar'
 
 export default function PageHeader({
   id,
@@ -48,7 +47,7 @@ export default function PageHeader({
         </div>
       )}
 
-      {showSearch && <Search placeholder='Search..' />}
+      {showSearch && <SearchBar placeholder='Search..' />}
     </div>
   )
 }

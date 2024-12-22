@@ -6,10 +6,13 @@ export const metadata = {
 
 export default function SocialPage() {
   return (
-    <div className='mx-auto flex min-h-screen flex-col items-center py-12'>
-      <div className='my-12'>
-        <TwitterGrid />
+    <section className='w-full py-12'>
+      <div className='container mx-auto my-24 max-w-2xl px-4 lg:max-w-7xl xl:px-0'>
+        <div className='prose mx-auto grid grid-cols-1 xl:prose-xl dark:prose-invert'>
+          <h2 className='font-serif font-black'>Social Media</h2>
+          <TwitterGrid />
+        </div>
       </div>
-    </div>
+    </section>
   )
 }

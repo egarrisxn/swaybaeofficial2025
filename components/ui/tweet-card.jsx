@@ -173,7 +173,7 @@ export const TweetCard = ({tweet, components, className, ...props}) => {
   return (
     <div
       className={cn(
-        'relative flex size-full max-w-lg flex-col gap-1 overflow-hidden rounded-lg border bg-white/70 p-8 shadow-md backdrop-blur-md sm:max-w-xl lg:max-w-lg lg:p-4 xl:p-8 dark:bg-black/70 dark:shadow-white/20',
+        'relative flex size-full max-w-lg flex-col gap-1 overflow-hidden rounded-lg border bg-white p-8 shadow-md backdrop-blur-md sm:max-w-xl lg:max-w-lg lg:p-4 xl:p-8 dark:bg-gradient-to-b dark:from-neutral-900 dark:via-neutral-800 dark:to-neutral-900',
         className,
       )}
       {...props}

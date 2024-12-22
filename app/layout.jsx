@@ -1,19 +1,27 @@
 import './globals.css'
-import {Poppins, Geist_Mono} from 'next/font/google'
+import {Fugaz_One, Poppins, Roboto_Serif, Tenor_Sans} from 'next/font/google'
 import {ThemeProvider} from './theme-provider'
 // import {Analytics} from '@vercel/analytics/react'
 // import {SpeedInsights} from '@vercel/speed-insights/next'
 
+const fugazOne = Fugaz_One({
+  variable: '--font-display',
+  subsets: ['latin'],
+  display: 'swap',
+  style: ['normal'],
+  weight: ['400'],
+})
+
 const poppins = Poppins({
-  variable: '--font-poppins',
+  variable: '--font-sans',
   subsets: ['latin'],
   display: 'swap',
   style: ['normal', 'italic'],
   weight: ['100', '200', '300', '400', '500', '600', '700', '800', '900'],
 })
 
-const geistMono = Geist_Mono({
-  variable: '--font-geist-mono',
+const robotoSerif = Roboto_Serif({
+  variable: '--font-serif',
   subsets: ['latin'],
   display: 'swap',
 })
@@ -81,7 +89,9 @@ export const viewport = {
 export default async function RootLayout({children}) {
   return (
     <html lang='en' suppressHydrationWarning>
-      <body className={`${poppins.variable} ${geistMono.variable} scroll-smooth antialiased`}>
+      <body
+        className={` ${fugazOne.variable} ${poppins.variable} ${robotoSerif.variable} scroll-smooth antialiased`}
+      >
         <ThemeProvider
           attribute='class'
           defaultTheme='system'

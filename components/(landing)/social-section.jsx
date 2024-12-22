@@ -47,10 +47,10 @@ export const socials = [
 
 export default function SocialSection() {
   return (
-    <section className='bg-gradient-to-tr from-slate-900 via-slate-800 to-slate-700'>
-      <div className='space-y-8 px-4 pb-12 pt-10 sm:pb-20 sm:pt-16 lg:pb-24 lg:pt-20 xl:px-8'>
-        <h5 className='text-center text-sm font-semibold uppercase text-white lg:text-base'>
-          Check Out What I&apos;ve Been Up To
+    <section className='bg-gradient-to-tr from-slate-300 via-slate-200 to-slate-100 dark:from-slate-950 dark:via-slate-800 dark:to-slate-950'>
+      <div className='space-y-4 pb-10 pt-8 sm:pb-12 md:space-y-5 md:pb-14 md:pt-12 lg:pb-16 lg:pt-14 xl:pb-20 xl:pt-[4.5rem] 2xl:space-y-6'>
+        <h5 className='text-center text-sm font-semibold uppercase lg:text-base'>
+          Lets get social
         </h5>
         <div className='flex flex-row flex-wrap items-center justify-center gap-4 sm:gap-6 md:gap-8 lg:gap-10 xl:gap-12 2xl:gap-16'>
           {socials.map(({title, subtitle, href, Icon}) => (

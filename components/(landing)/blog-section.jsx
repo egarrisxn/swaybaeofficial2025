@@ -6,21 +6,21 @@ import {Button} from '@/components/ui/button'
 export default function BlogSection() {
   return (
     <section className='border-4 border-white pt-12 dark:border-black'>
-      <div className='container mx-auto mt-24 max-w-7xl px-4 xl:px-0'>
-        <div className='grid grid-cols-1 gap-6 md:grid-cols-2 xl:gap-12 2xl:gap-16'>
+      <div className='container mx-auto mt-12 max-w-6xl px-4 xl:px-0'>
+        <div className='grid grid-cols-1 gap-6 md:grid-cols-2 xl:gap-12'>
           {/* Image Section */}
-          <aside className='relative order-2 flex justify-center md:order-1 md:justify-end'>
+          <aside className='relative order-2 flex justify-center md:order-1 md:justify-start xl:px-4'>
             <Image
               src='/images/blogpicture.png'
               alt='Another cutout photo of Sway'
-              width={850}
-              height={1400}
+              width={500}
+              height={900}
               className='h-auto max-w-[75%] md:max-w-full'
             />
           </aside>
 
           {/* Text Section */}
-          <article className='order-1 flex flex-col gap-3 p-4 md:order-2 md:mb-24 md:gap-6 md:pt-24 lg:mb-0'>
+          <article className='order-1 flex flex-col gap-3 p-4 md:order-2 md:mb-24 md:gap-6 md:pt-24 lg:mb-0 xl:pt-32'>
             <h6 className='text-center font-semibold uppercase tracking-wide text-gray-700 md:text-start lg:text-center dark:text-neutral-100'>
               Latest Blog Posts
             </h6>
@@ -61,7 +61,7 @@ export default function BlogSection() {
               </Link>
             </div>
             <div className='mt-16 flex items-center justify-center'>
-              <Button asChild variant='bubble' size='fat'>
+              <Button asChild variant='threedee' size='thick'>
                 <Link href='/blog'>Read More!</Link>
               </Button>
             </div>

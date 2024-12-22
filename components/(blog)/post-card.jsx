@@ -41,7 +41,7 @@ export function PostCard({post, noTagColor = false, isFeatured = false}) {
             <Link href={`/blog/post/${postSlug}`}>{title}</Link>
           </h3>
           <p
-            className={`mb-3 font-light tracking-normal text-gray-600 dark:text-gray-400 ${isFeatured ? 'max-w-5xl text-lg leading-snug' : 'line-clamp-3 text-sm leading-normal'}`}
+            className={`mb-3 font-light tracking-normal text-gray-700 dark:text-gray-300 ${isFeatured ? 'max-w-5xl text-lg leading-snug' : 'line-clamp-3 text-sm leading-normal'}`}
           >
             {excerpt}
           </p>
