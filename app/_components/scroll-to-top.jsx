@@ -1,7 +1,7 @@
 'use client'
 import {ArrowUp} from 'lucide-react'
 
-export const ScrollToTop = ({text = 'Back to top'}) => {
+export function ScrollToTop({text = 'Back to top'}) {
   const scrollOnClick = () => {
     window.scrollTo({top: 0, behavior: 'smooth'})
   }

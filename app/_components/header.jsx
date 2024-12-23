@@ -35,20 +35,26 @@ export function Header({isSticky = false}) {
             Sway Bae
           </Link>
         </div>
-        <div className='flex items-center justify-end gap-1 text-xs md:gap-2 md:text-base'>
-          <Link href='/blog' className='font-semibold uppercase text-blue-800'>
+        <div className='flex items-center justify-end gap-1 text-xs md:gap-4 md:text-base'>
+          {/* <Link href='/blog' className='font-semibold uppercase text-blue-800'>
             Blog
-          </Link>
-          <Link href='/calendar' className='font-semibold uppercase text-blue-800'>
+          </Link> */}
+          {/* <Link href='/calendar' className='font-semibold uppercase text-blue-800'>
             Calendar
-          </Link>
-          <Link href='/community' className='font-semibold uppercase text-blue-800'>
+          </Link> */}
+          <Link
+            href='/community'
+            className='font-semibold uppercase hover:text-blue-800 hover:underline hover:underline-offset-4'
+          >
             Community
           </Link>
-          <Link href='/#contact' className='font-semibold uppercase text-blue-800'>
+          {/* <Link href='/#contact' className='font-semibold uppercase text-blue-800'>
             Contact
-          </Link>
-          <Link href='/subathon' className='font-semibold uppercase text-blue-800'>
+          </Link> */}
+          <Link
+            href='/subathon'
+            className='font-semibold uppercase hover:text-blue-800 hover:underline hover:underline-offset-4'
+          >
             Subathon
           </Link>
           <ThemeToggle />
