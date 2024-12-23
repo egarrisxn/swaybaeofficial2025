@@ -119,13 +119,11 @@ export function ContactForm() {
         className='3xl:text-2xl flex min-h-[80px] w-full rounded-md border bg-white px-3 py-2 text-black shadow ring-offset-background focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary focus-visible:ring-offset-2 disabled:cursor-not-allowed disabled:opacity-50 xl:text-base'
         required
       />
-      <Button variant='shimmer' size='xl' type='submit' className='group'>
-        <span>Send Message</span>
-        <SendHorizonal
-          size={16}
-          className='-translate-x-1 transition-all duration-300 ease-out group-hover:translate-x-1 group-hover:scale-x-105'
-        />
-      </Button>
+      <div className='flex items-center justify-center pt-2'>
+        <Button className='uppercase tracking-tight' size='dynamic' type='submit' variant='shimmer'>
+          <span className='text-sm'>Send Message</span>
+        </Button>
+      </div>
     </form>
   )
 }

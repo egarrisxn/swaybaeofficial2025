@@ -1,7 +1,7 @@
 import Image from 'next/image'
 import Link from 'next/link'
 import {notFound} from 'next/navigation'
-import {ChevronLeft, MoveLeft} from 'lucide-react'
+import {ArrowLeft, MoveLeft} from 'lucide-react'
 import {generateStaticSlugs} from '@/lib/sanity/generateStaticSlugs'
 import {loadPost} from '@/lib/sanity/loadQuery'
 import {urlFor} from '@/lib/sanity/client'
@@ -38,10 +38,10 @@ const PostSlug = ({post}) => {
             <div className='flex flex-row'>
               <Link
                 href={'/blog'}
-                className='text-bold group flex cursor-pointer items-center gap-2 text-muted-foreground hover:text-primary'
+                className='group flex cursor-pointer items-center gap-1 text-muted-foreground hover:text-primary'
               >
-                <ChevronLeft className='ml-1 size-4 transition group-hover:-translate-x-1' />{' '}
-                <span>Go Back</span>
+                <ArrowLeft className='ml-1 size-4 transition group-hover:-translate-x-1' />{' '}
+                <span className='uppercase tracking-widest'>Blog</span>
               </Link>
             </div>
           </div>
@@ -49,11 +49,11 @@ const PostSlug = ({post}) => {
         <article className='mb-4 mt-12 grid max-w-4xl grid-cols-1 px-2 sm:px-4 lg:mt-20 lg:px-8 2xl:max-w-6xl'>
           <section className='space-y-2 py-4'>
             <Link
-              href={'/'}
-              className='text-bold group mb-4 flex cursor-pointer items-center gap-2 text-muted-foreground hover:text-primary xl:hidden'
+              href={'/blog'}
+              className='group mb-4 flex cursor-pointer items-center gap-1 text-muted-foreground hover:text-primary xl:hidden'
             >
               <MoveLeft className='ml-1 size-4 transition group-hover:-translate-x-1' />{' '}
-              <span className='text-sm'>Back Home</span>
+              <span className='text-sm uppercase tracking-widest'>Blog</span>
             </Link>
             <h1 className='mb-2.5 text-lg font-medium lg:leading-[1.1] xl:text-xl'>{title}</h1>
             <div className='flex flex-wrap items-center space-x-1.5 text-sm text-muted-foreground'>

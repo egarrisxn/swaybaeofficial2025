@@ -1,7 +1,8 @@
 'use client'
 import {useCallback} from 'react'
 import {useTheme} from 'next-themes'
-import {GiMoonOrbit, GiStripedSun} from 'react-icons/gi'
+// import {GiMoonOrbit, GiStripedSun} from 'react-icons/gi'
+import {Lightbulb, LightbulbOff} from 'lucide-react'
 import {Button} from '@/components/ui/button'
 import {Tooltip} from '@/components/ui/tooltip'
 
@@ -13,7 +14,11 @@ export default function ThemeToggle() {
   return (
     <Button onClick={handleToggleTheme} variant='ghost' size='icon' aria-label='Toggle Theme'>
       <Tooltip direction='bottom' text={resolvedTheme === 'light' ? 'Dark' : 'Light'}>
-        {resolvedTheme === 'light' ? <GiMoonOrbit /> : <GiStripedSun />}
+        {resolvedTheme === 'light' ? (
+          <LightbulbOff className='text-red-950' />
+        ) : (
+          <Lightbulb className='text-yellow-500' />
+        )}
       </Tooltip>
     </Button>
   )

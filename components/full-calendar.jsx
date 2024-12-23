@@ -1,6 +1,5 @@
 'use client'
-import {useRef, useEffect, useCallback} from 'react'
-import debounce from 'lodash.debounce'
+import {useRef} from 'react'
 import FullCalendar from '@fullcalendar/react'
 import dayGridPlugin from '@fullcalendar/daygrid'
 import listPlugin from '@fullcalendar/list'
@@ -9,7 +8,7 @@ import googleCalendarPlugin from '@fullcalendar/google-calendar'
 const key = process.env.NEXT_PUBLIC_CALENDAR_API_KEY
 const id = process.env.NEXT_PUBLIC_CALENDAR_ID
 
-export default function FullGoogleCalendar() {
+export function FullGoogleCalendar() {
   const calendarRef = useRef(null)
 
   const handleViewChange = (view) => {
@@ -18,28 +17,6 @@ export default function FullGoogleCalendar() {
       calendarApi.changeView(view)
     }
   }
-
-  const debouncedResizeHandler = useRef(
-    debounce(() => {
-      const calendarApi = calendarRef.current?.getApi()
-      const isMobile = window.matchMedia('(max-width: 767px)').matches
-      if (calendarApi) {
-        calendarApi.changeView(isMobile ? 'listMonth' : 'dayGridMonth')
-      }
-    }, 200),
-  ).current
-
-  const handleWindowResize = useCallback(() => {
-    debouncedResizeHandler()
-  }, [debouncedResizeHandler])
-
-  useEffect(() => {
-    handleWindowResize()
-    window.addEventListener('resize', handleWindowResize)
-    return () => {
-      window.removeEventListener('resize', handleWindowResize)
-    }
-  }, [handleWindowResize])
 
   return (
     <FullCalendar

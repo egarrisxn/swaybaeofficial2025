@@ -7,13 +7,13 @@ export default function TwitterSection() {
         <div className='grid grid-cols-1 place-items-center gap-6 lg:place-items-start lg:gap-8'>
           {/* Text Section */}
           <article className='flex w-full flex-col gap-1 p-2 sm:px-12 sm:py-4 lg:gap-3 lg:px-4'>
-            <h6 className='pb-2 font-semibold uppercase tracking-wide text-gray-700 dark:text-neutral-100'>
+            <h6 className='pb-1 font-semibold uppercase tracking-wide text-gray-700 dark:text-neutral-100'>
               Keeping It Social
             </h6>
-            <h2 className='bg-gradient-to-t from-neutral-600 via-neutral-700 to-neutral-800 bg-clip-text pb-3 font-serif text-4xl font-bold text-transparent drop-shadow-[0_0.5px_0.5px_rgba(0,0,0,0.8)] lg:text-6xl dark:from-stone-200 dark:to-neutral-200'>
+            <h2 className='bg-gradient-to-t from-neutral-600 via-neutral-700 to-neutral-800 bg-clip-text pb-3 font-serif text-4xl font-bold text-transparent drop-shadow-[0_0.5px_0.5px_rgba(0,0,0,0.8)] lg:text-5xl xl:text-6xl dark:from-stone-200 dark:to-neutral-200'>
               Follow me on my adventures!
             </h2>
-            <p className='max-w-3xl text-pretty pb-3 font-light leading-relaxed text-gray-700 md:text-lg lg:text-xl dark:text-gray-300'>
+            <p className='max-w-3xl text-pretty pb-3 font-light leading-relaxed text-gray-700 lg:text-lg xl:text-xl dark:text-gray-300'>
               I create family-friendly entertainment centered around the concepts of positive mental
               attitude in gaming with the mantra of leaving someone&apos;s day better than I found
               it.

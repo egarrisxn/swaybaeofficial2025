@@ -1,5 +1,5 @@
 import Link from 'next/link'
-import {ChevronLeft} from 'lucide-react'
+import {ArrowLeft} from 'lucide-react'
 import SearchBar from './search-bar'
 
 export default function PageHeader({
@@ -21,18 +21,13 @@ export default function PageHeader({
       {showHr && <hr className='rounded-lg border' />}
 
       {showLink && (
-        <div className='ml-2 hidden flex-row items-center gap-0.5 sm:flex'>
+        <div className='hidden flex-row items-center gap-0.5 sm:flex'>
           <Link
             href={linkHref}
-            className='text-bold group flex cursor-pointer items-center gap-2 text-muted-foreground hover:text-primary'
+            className='group flex cursor-pointer items-center gap-1 text-muted-foreground hover:text-primary'
           >
-            <ChevronLeft className='ml-1 size-6 transition group-hover:-translate-x-1' />{' '}
-            <span
-              id={id}
-              aria-label={linkText}
-              className={`text-lg tracking-widest`}
-              // className={`bg-gradient-to-tr from-purple-500 via-pink-500 to-pink-200 bg-clip-text text-xl uppercase tracking-widest text-transparent`}
-            >
+            <ArrowLeft className='ml-1 size-4 transition group-hover:-translate-x-1' />{' '}
+            <span id={id} className='uppercase tracking-widest'>
               {linkText}
             </span>
           </Link>
@@ -40,8 +35,8 @@ export default function PageHeader({
       )}
 
       {!showLink && (
-        <div className='ml-2 hidden items-center sm:flex'>
-          <span id={id} className={`text-lg tracking-widest`}>
+        <div className='hidden items-center sm:flex'>
+          <span id={id} className={`racking-widest`}>
             {children}
           </span>
         </div>

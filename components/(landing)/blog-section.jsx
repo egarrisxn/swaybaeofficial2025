@@ -7,7 +7,7 @@ export default function BlogSection() {
   return (
     <section className='border-4 border-white pt-12 dark:border-black'>
       <div className='container mx-auto mt-12 max-w-6xl px-4 xl:px-0'>
-        <div className='grid grid-cols-1 gap-6 md:grid-cols-2 xl:gap-12'>
+        <div className='grid grid-cols-1 gap-12 md:grid-cols-2 md:gap-6 xl:gap-12'>
           {/* Image Section */}
           <aside className='relative order-2 flex justify-center md:order-1 md:justify-start xl:px-4'>
             <Image
@@ -20,8 +20,8 @@ export default function BlogSection() {
           </aside>
 
           {/* Text Section */}
-          <article className='order-1 flex flex-col gap-3 p-4 md:order-2 md:mb-24 md:gap-6 md:pt-24 lg:mb-0 xl:pt-32'>
-            <h6 className='text-center font-semibold uppercase tracking-wide text-gray-700 md:text-start lg:text-center dark:text-neutral-100'>
+          <article className='order-1 flex flex-col gap-3 p-4 md:order-2 md:mb-24 md:pt-24 lg:mb-0 lg:gap-5 xl:pt-32'>
+            <h6 className='text-center font-semibold uppercase tracking-wide text-gray-700 dark:text-neutral-100'>
               Latest Blog Posts
             </h6>
             <div className='mt-2 border-b-2 pb-8 md:pb-4 lg:p-8'>
@@ -60,8 +60,8 @@ export default function BlogSection() {
                 </div>
               </Link>
             </div>
-            <div className='mt-16 flex items-center justify-center'>
-              <Button asChild variant='threedee' size='thick'>
+            <div className='mt-16 flex items-center justify-center md:mt-12 lg:mt-16'>
+              <Button asChild variant='main' size='thick'>
                 <Link href='/blog'>Read More!</Link>
               </Button>
             </div>

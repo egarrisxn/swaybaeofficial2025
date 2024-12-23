@@ -11,33 +11,28 @@ import ContactSection from '@/components/(landing)/contact-section'
 import PhotosSection from '@/components/(landing)/photo-section'
 import TextSection from '@/components/(landing)/text-section'
 
-import {LandingHeader} from './_components/header'
-import {LandingFooter} from './_components/footer'
-
 export const metadata = {
   title: 'Landing',
 }
 
 export default function LandingPage() {
   return (
-    <div className='relative grid min-h-[100dvh] w-full grid-rows-[auto_1fr_auto] overscroll-contain'>
-      <LandingHeader />
-      <div>
-        <HeroSection />
-        <AboutSection />
-        <SocialSection />
-        <YouTubeSection />
-        <TwitterSection />
-        <CalendarSection />
-        <MerchSection />
-        <BlogSection />
-        <BrandsSection />
+    <>
+      <HeroSection />
+      <AboutSection />
+      <SocialSection />
+      <YouTubeSection />
+      <TwitterSection />
+      <CalendarSection />
+      <MerchSection />
+      <BlogSection />
+      <BrandsSection />
+      <section id='contact'>
         <ContactSection />
-        <PhotosSection />
-        <TextSection />
-      </div>
-      <LandingFooter />
-    </div>
+      </section>
+      <PhotosSection />
+      <TextSection />
+    </>
   )
 }
 

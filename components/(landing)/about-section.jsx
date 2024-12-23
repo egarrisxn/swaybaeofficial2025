@@ -6,9 +6,9 @@ export default function AboutSection() {
   return (
     <section className='border-4 border-white pt-12 dark:border-black'>
       <div className='container mx-auto mt-12 max-w-6xl px-4 xl:px-0'>
-        <div className='grid grid-cols-1 gap-6 md:grid-cols-2 xl:gap-0'>
+        <div className='grid grid-cols-1 gap-6 md:grid-cols-2 xl:gap-12'>
           {/* Text Section */}
-          <article className='mx-auto flex flex-col gap-3 p-4 md:mb-24 md:gap-5 md:pt-24 lg:mb-0 xl:pt-32'>
+          <article className='mx-auto flex flex-col gap-3 p-4 md:mb-24 md:pt-24 lg:mb-0 lg:gap-5 xl:pt-32'>
             <h6 className='text-2xl font-semibold uppercase tracking-widest text-gray-700 dark:text-neutral-100'>
               Heya!
             </h6>
@@ -21,7 +21,7 @@ export default function AboutSection() {
               entertainment centered around the concepts of positive mental attitude in gaming with
               the mantra of leaving someone&apos;s day better than I found it.
             </p>
-            <Button asChild variant='threedee' size='thick'>
+            <Button asChild variant='main' size='thick'>
               <Link href='/about'>Learn more!</Link>
             </Button>
           </article>
