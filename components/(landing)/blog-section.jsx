@@ -5,7 +5,8 @@ import {Button} from '@/components/ui/button'
 
 export default function BlogSection() {
   return (
-    <section className='border-4 border-white pt-12 dark:border-black'>
+    // <section className='border-4 border-white pt-12 dark:border-black'>
+    <section className='pt-12'>
       <div className='container mx-auto mt-12 max-w-6xl px-4 xl:px-0'>
         <div className='grid grid-cols-1 gap-12 md:grid-cols-2 md:gap-6 xl:gap-12'>
           {/* Image Section */}

@@ -18,12 +18,12 @@ export function Header({isSticky = false}) {
 
   return (
     <header
-      className={`mx-auto flex w-full items-center shadow backdrop-blur-md transition-opacity duration-300 ease-in-out ${
+      className={`mx-auto flex w-full items-center backdrop-blur-md transition-opacity duration-300 ease-in-out ${
         isSticky
           ? sticky
-            ? 'fixed z-40 bg-white/70 dark:bg-slate-900/70'
+            ? 'fixed z-40 bg-zinc-50/70 dark:bg-stone-800/70'
             : 'absolute opacity-0'
-          : 'fixed left-0 top-0 z-40 bg-neutral-100/70 dark:bg-slate-900/70'
+          : 'fixed left-0 top-0 z-40 bg-zinc-50/70 dark:bg-stone-800/70'
       }`}
     >
       <nav className='flex w-full flex-row items-center justify-between px-2 py-5 lg:px-4 xl:px-6'>
@@ -36,26 +36,11 @@ export function Header({isSticky = false}) {
           </Link>
         </div>
         <div className='flex items-center justify-end gap-1 text-xs md:gap-4 md:text-base'>
-          {/* <Link href='/blog' className='font-semibold uppercase text-blue-800'>
-            Blog
-          </Link> */}
-          {/* <Link href='/calendar' className='font-semibold uppercase text-blue-800'>
-            Calendar
-          </Link> */}
           <Link
             href='/community'
             className='font-semibold uppercase hover:text-blue-800 hover:underline hover:underline-offset-4'
           >
             Community
-          </Link>
-          {/* <Link href='/#contact' className='font-semibold uppercase text-blue-800'>
-            Contact
-          </Link> */}
-          <Link
-            href='/subathon'
-            className='font-semibold uppercase hover:text-blue-800 hover:underline hover:underline-offset-4'
-          >
-            Subathon
           </Link>
           <ThemeToggle />
         </div>

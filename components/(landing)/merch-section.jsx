@@ -3,7 +3,8 @@ import {Button} from '@/components/ui/button'
 
 export default function MerchSection() {
   return (
-    <section className='border-4 border-white py-12 dark:border-black'>
+    // <section className='border-4 border-white py-12 dark:border-black'>
+    <section className='py-12'>
       <div className='container mx-auto my-24 max-w-2xl px-4 lg:max-w-7xl xl:px-0'>
         <div className='grid grid-cols-1 gap-6 lg:grid-cols-2 lg:gap-8 xl:gap-12 2xl:gap-16'>
           {/* Text Section */}
@@ -28,7 +29,7 @@ export default function MerchSection() {
           </article>
 
           {/* Merch Section */}
-          <aside className='flex size-full items-center justify-center py-2 lg:py-4 xl:items-start xl:justify-start'>
+          <aside className='flex size-full items-center justify-center py-2 lg:py-4 xl:pr-16'>
             <CardStack />
           </aside>
         </div>

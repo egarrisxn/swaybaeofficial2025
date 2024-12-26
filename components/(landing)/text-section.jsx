@@ -7,7 +7,7 @@ export default function TextSection() {
       <div className='mx-auto flex max-w-[calc(100vw-1.2rem)] overflow-hidden'>
         <VelocityScroll
           text='Creator of Chaos'
-          default_velocity={4}
+          default_velocity={2}
           className='text-center font-sans text-4xl font-black italic tracking-tight text-black drop-shadow-lg md:text-7xl md:leading-[5rem] dark:text-white'
         />
       </div>

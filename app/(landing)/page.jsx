@@ -22,14 +22,18 @@ export default function LandingPage() {
       <AboutSection />
       <SocialSection />
       <YouTubeSection />
+      <hr className='h-1 bg-black dark:bg-white' />
       <TwitterSection />
+      <hr className='h-1 bg-black dark:bg-white' />
       <CalendarSection />
+      <hr className='h-1 bg-black dark:bg-white' />
       <MerchSection />
+      <hr className='h-1 bg-black dark:bg-white' />
       <BlogSection />
       <BrandsSection />
-      <section id='contact'>
+      <div id='contact'>
         <ContactSection />
-      </section>
+      </div>
       <PhotosSection />
       <TextSection />
     </>

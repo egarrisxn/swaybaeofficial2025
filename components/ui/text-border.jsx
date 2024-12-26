@@ -2,7 +2,7 @@
 import {useEffect, useState} from 'react'
 import {cn} from '@/lib/utils'
 
-export default function TextBorder({text = 'Programming', className}) {
+export default function TextBorder({text = 'Creator of Chaos', className}) {
   const [isHoveredIn, setIsHoveredIn] = useState(false)
   const [isHoveredOut, setIsHoveredOut] = useState(false)
 
@@ -45,7 +45,7 @@ export default function TextBorder({text = 'Programming', className}) {
       </div>
       <span
         className={cn(
-          'bg-gradient-to-t from-neutral-200 to-neutral-300 bg-clip-text pb-3 text-4xl font-black leading-none tracking-tight text-transparent sm:text-5xl md:text-6xl lg:text-8xl xl:text-9xl 2xl:text-[6rem]',
+          'text-5xl font-black leading-none tracking-tighter text-white drop-shadow md:text-7xl lg:text-8xl xl:text-9xl 2xl:text-[9rem]',
           className,
         )}
       >
