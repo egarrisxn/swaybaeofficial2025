@@ -1,7 +1,7 @@
 import {SocialCard} from '@/components/social-card'
 import {socials} from '@/lib/data'
 
-export default function SocialSection() {
+export default function SocialRow() {
   return (
     <section className='bg-gradient-to-t from-slate-200 via-slate-300 to-slate-100 dark:from-slate-950 dark:via-slate-800 dark:to-slate-950'>
       <div className='space-y-4 pb-10 pt-8 sm:pb-12 md:space-y-5 md:pb-14 md:pt-12 lg:pb-16 lg:pt-14 xl:pb-20 xl:pt-[4.5rem] 2xl:space-y-6'>

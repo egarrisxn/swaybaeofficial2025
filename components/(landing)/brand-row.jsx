@@ -12,7 +12,7 @@ const brands = [
   {img: '/brands/dreamhack.png', href: 'https://dreamhack.com'},
 ]
 
-export default function BrandSection() {
+export default function BrandRow() {
   return (
     <section className='bg-gradient-to-t from-slate-200 via-slate-300 to-slate-100 dark:from-slate-950 dark:via-slate-900 dark:to-slate-950'>
       <div className='space-y-1 pb-6 pt-12 md:pb-8 md:pt-14 lg:pt-16 xl:pt-[4.5rem]'>

@@ -1,18 +1,22 @@
 import HeroSection from '@/components/(landing)/hero-section'
 import AboutSection from '@/components/(landing)/about-section'
-import SocialSection from '@/components/(landing)/social-section'
+import SocialRow from '@/components/(landing)/social-row'
 import YouTubeSection from '@/components/(landing)/youtube-section'
 import TwitterSection from '@/components/(landing)/twitter-section'
 import CalendarSection from '@/components/(landing)/calendar-section'
 import MerchSection from '@/components/(landing)/merch-section'
 import BlogSection from '@/components/(landing)/blog-section'
-import BrandsSection from '@/components/(landing)/brand-section'
+import BrandRow from '@/components/(landing)/brand-row'
 import ContactSection from '@/components/(landing)/contact-section'
 import PhotosSection from '@/components/(landing)/photo-section'
-import TextSection from '@/components/(landing)/text-section'
+import TextRow from '@/components/(landing)/text-row'
 
 export const metadata = {
   title: 'Landing',
+}
+
+function HR() {
+  return <hr className='h-1 bg-black dark:bg-white' />
 }
 
 export default function LandingPage() {
@@ -20,22 +24,23 @@ export default function LandingPage() {
     <>
       <HeroSection />
       <AboutSection />
-      <SocialSection />
+      <SocialRow />
       <YouTubeSection />
-      <hr className='h-1 bg-black dark:bg-white' />
+      <HR />
       <TwitterSection />
-      <hr className='h-1 bg-black dark:bg-white' />
+      <HR />
       <CalendarSection />
-      <hr className='h-1 bg-black dark:bg-white' />
+      <HR />
       <MerchSection />
-      <hr className='h-1 bg-black dark:bg-white' />
+      <HR />
       <BlogSection />
-      <BrandsSection />
+      <BrandRow />
       <div id='contact'>
         <ContactSection />
       </div>
+      <HR />
       <PhotosSection />
-      <TextSection />
+      <TextRow />
     </>
   )
 }

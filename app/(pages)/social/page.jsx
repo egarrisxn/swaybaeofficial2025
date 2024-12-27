@@ -1,8 +1,7 @@
-import {CalendarGrid} from '@/components/calendar-grid'
-import {CalendarList} from '@/components/calendar-list'
+import TwitterGrid from '@/components/twitter-grid'
 
 export const metadata = {
-  title: 'Calendar',
+  title: 'Social Page',
 }
 
 function TextBlurb({h2, p}) {
@@ -18,24 +17,19 @@ function TextBlurb({h2, p}) {
   )
 }
 
-export default function CalendarPage() {
+export default function SocialPage() {
   return (
-    <section className='min-h-screen w-full py-12'>
-      <div className='container mx-auto my-24 max-w-7xl px-4 xl:px-0'>
+    <section className='w-full py-12'>
+      <div className='container mx-auto my-24 max-w-2xl px-4 lg:max-w-7xl xl:px-0'>
         <div className='mx-auto grid grid-cols-1'>
           <TextBlurb
-            h2='Calendar'
+            h2='Social Media'
             p='Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
             incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud
             exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure
             dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.'
           />
-          <div className='hidden md:block'>
-            <CalendarGrid />
-          </div>
-          <div className='block md:hidden'>
-            <CalendarList />
-          </div>
+          <TwitterGrid />
         </div>
       </div>
     </section>

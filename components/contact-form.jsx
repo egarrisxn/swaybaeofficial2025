@@ -1,7 +1,15 @@
 'use client'
 import {useState} from 'react'
-import {SendHorizonal} from 'lucide-react'
+import {Input} from '@/components/ui/input'
+import {Textarea} from '@/components/ui/textarea'
 import {Button} from '@/components/ui/button'
+import {Label} from '@/components/ui/label'
+
+const inputStyling =
+  'w-full rounded-md border bg-white px-3 py-2 text-black shadow ring-offset-background file:flex file:border-0 file:bg-transparent file:font-medium focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary focus-visible:ring-offset-2 disabled:cursor-not-allowed disabled:opacity-50 xl:px-5 xl:py-3 xl:text-base'
+
+const textareaStyling =
+  '3xl:text-2xl flex min-h-[80px] w-full rounded-md border bg-white px-3 py-2 text-black shadow ring-offset-background focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary focus-visible:ring-offset-2 disabled:cursor-not-allowed disabled:opacity-50 xl:text-base'
 
 export function ContactForm() {
   const [formData, setFormData] = useState({
@@ -63,10 +71,10 @@ export function ContactForm() {
       className='w-full space-y-4 sm:space-y-2 md:space-y-4 lg:space-y-6 xl:space-y-8'
       onSubmit={handleSubmit}
     >
-      <label htmlFor='name' className='sr-only'>
-        Your Name
-      </label>
-      <input
+      <Label htmlFor='name' className='sr-only'>
+        Name
+      </Label>
+      <Input
         type='text'
         id='name'
         name='name'
@@ -74,13 +82,13 @@ export function ContactForm() {
         autoComplete='on'
         value={formData.name}
         onChange={handleInputChange}
-        className='w-full rounded-md border bg-white px-3 py-2 text-black shadow ring-offset-background file:flex file:border-0 file:bg-transparent file:font-medium focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary focus-visible:ring-offset-2 disabled:cursor-not-allowed disabled:opacity-50 xl:px-5 xl:py-3 xl:text-base'
+        className={`${inputStyling}`}
         required
       />
-      <label htmlFor='email' className='sr-only'>
-        Your Email
-      </label>
-      <input
+      <Label htmlFor='email' className='sr-only'>
+        Email
+      </Label>
+      <Input
         type='email'
         id='email'
         name='email'
@@ -88,14 +96,14 @@ export function ContactForm() {
         autoComplete='on'
         value={formData.email}
         onChange={handleInputChange}
-        className='w-full rounded-md border bg-white px-3 py-2 text-black shadow ring-offset-background file:flex file:border-0 file:bg-transparent file:font-medium focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary focus-visible:ring-offset-2 disabled:cursor-not-allowed disabled:opacity-50 xl:px-5 xl:py-3 xl:text-base'
+        className={`${inputStyling}`}
         required
       />
 
-      <label htmlFor='subject' className='sr-only'>
+      <Label htmlFor='subject' className='sr-only'>
         Subject
-      </label>
-      <input
+      </Label>
+      <Input
         type='text'
         id='subject'
         name='subject'
@@ -103,20 +111,20 @@ export function ContactForm() {
         autoComplete='on'
         value={formData.subject}
         onChange={handleInputChange}
-        className='w-full rounded-md border bg-white px-3 py-2 text-black shadow ring-offset-background file:flex file:border-0 file:bg-transparent file:font-medium focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary focus-visible:ring-offset-2 disabled:cursor-not-allowed disabled:opacity-50 xl:px-5 xl:py-3 xl:text-base'
+        className={`${inputStyling}`}
         required
       />
-      <label htmlFor='message' className='sr-only'>
-        Your Message
-      </label>
-      <textarea
+      <Label htmlFor='message' className='sr-only'>
+        Message
+      </Label>
+      <Textarea
         id='message'
         name='message'
         rows={4}
         placeholder='Your Message'
         value={formData.message}
         onChange={handleInputChange}
-        className='3xl:text-2xl flex min-h-[80px] w-full rounded-md border bg-white px-3 py-2 text-black shadow ring-offset-background focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary focus-visible:ring-offset-2 disabled:cursor-not-allowed disabled:opacity-50 xl:text-base'
+        className={`${textareaStyling}`}
         required
       />
       <div className='flex items-center justify-center pt-2'>

@@ -1,7 +1,7 @@
 'use client'
 import {VelocityScroll} from '@/components/ui/velocity-scroll'
 
-export default function TextSection() {
+export default function TextRow() {
   return (
     <section className='mb-2 mt-8'>
       <div className='mx-auto flex max-w-[calc(100vw-1.2rem)] overflow-hidden'>

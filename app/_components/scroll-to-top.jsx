@@ -8,7 +8,7 @@ export function ScrollToTop({text = 'Back to top'}) {
 
   return (
     <button className='group flex items-center justify-center gap-1' onClick={scrollOnClick}>
-      <p className='bg-gradient-to-bl from-primary to-secondary bg-clip-text font-semibold uppercase tracking-tight text-transparent'>
+      <p className='bg-gradient-to-bl from-primary/90 via-primary/70 to-primary/50 bg-clip-text font-semibold uppercase tracking-tight text-transparent'>
         {text}
       </p>
       <ArrowUp

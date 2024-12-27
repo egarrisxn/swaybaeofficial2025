@@ -68,24 +68,62 @@ module.exports = {
           },
         },
         cloud: {
-          from: {transform: 'translateX(0)'},
-          to: {transform: 'translateX(calc(-100% - 4rem))'},
+          from: {
+            transform: 'translateX(0)',
+          },
+          to: {
+            transform: 'translateX(calc(-100% - 4rem))',
+          },
         },
         marquee: {
-          from: {transform: 'translateX(0)'},
-          to: {transform: 'translateX(calc(-100% - var(--gap)))'},
+          from: {
+            transform: 'translateX(0)',
+          },
+          to: {
+            transform: 'translateX(calc(-100% - var(--gap)))',
+          },
         },
         marqueevertical: {
-          from: {transform: 'translateY(0)'},
-          to: {transform: 'translateY(calc(-100% - var(--gap)))'},
+          from: {
+            transform: 'translateY(0)',
+          },
+          to: {
+            transform: 'translateY(calc(-100% - var(--gap)))',
+          },
         },
         fade: {
-          from: {opacity: '0'},
-          to: {opacity: '1'},
+          from: {
+            opacity: '0',
+          },
+          to: {
+            opacity: '1',
+          },
         },
         fizzle: {
-          '0%': {opacity: 0, transform: 'translateY(8px)'},
-          '100%': {opacity: 1, transform: 'translateY(0)'},
+          '0%': {
+            opacity: 0,
+            transform: 'translateY(8px)',
+          },
+          '100%': {
+            opacity: 1,
+            transform: 'translateY(0)',
+          },
+        },
+        'accordion-down': {
+          from: {
+            height: '0',
+          },
+          to: {
+            height: 'var(--radix-accordion-content-height)',
+          },
+        },
+        'accordion-up': {
+          from: {
+            height: 'var(--radix-accordion-content-height)',
+          },
+          to: {
+            height: '0',
+          },
         },
       },
       animation: {
@@ -95,6 +133,8 @@ module.exports = {
         marqueevertical: 'marqueevertical var(--duration) linear infinite',
         fade: 'fade 0.5s ease-in',
         fizzle: 'fizzle 0.3s ease-in-out forwards',
+        'accordion-down': 'accordion-down 0.2s ease-out',
+        'accordion-up': 'accordion-up 0.2s ease-out',
       },
     },
   },

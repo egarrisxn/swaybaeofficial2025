@@ -10,7 +10,7 @@ const buttonVariants = cva(
       variant: {
         default: 'bg-primary text-primary-foreground shadow hover:bg-primary/90',
         link: 'text-primary hover:underline-offset-4 hover:underline',
-        icon: 'bg-background border shadow-md shadow-[hsla(0,0%,0%,.4)] drop-shadow transition-all duration-200 ease-in-out rounded-3xl border-foreground/30 dark:bg-slate-800/80 hover:bg-slate-100 hover:shadow-[rgba(0,0,0,..5)] dark:shadow-[rgba(175,230,255,0.1)] dark:hover:bg-slate-700/80 dark:hover:shadow-slate-100/30',
+        icon: 'bg-background border shadow-md shadow-[hsla(0,0%,0%,.3)] drop-shadow transition-all duration-200 ease-in-out rounded-3xl border-foreground/20 dark:bg-slate-800/80 hover:bg-slate-100 hover:shadow-[rgba(0,0,0,..5)] dark:shadow-[rgba(175,230,255,0.1)] dark:hover:bg-slate-700/80 dark:hover:shadow-slate-100/30',
         outline:
           'border border-input bg-background shadow-sm hover:bg-accent hover:text-accent-foreground',
         secondary: 'bg-secondary text-secondary-foreground shadow-sm hover:bg-secondary/80',
