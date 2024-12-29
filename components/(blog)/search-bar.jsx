@@ -5,7 +5,7 @@ import {useState, useEffect} from 'react'
 import {useDebouncedCallback} from 'use-debounce'
 import {SEARCH_QUERY} from '@/lib/sanity/queries'
 import {client} from '@/lib/sanity/client'
-import {Search as SearchIcon} from 'lucide-react'
+import {SearchIcon} from '@/components/(icons)/search-icon'
 
 export default function SearchBar({placeholder}) {
   const searchParams = useSearchParams()
@@ -78,7 +78,7 @@ export default function SearchBar({placeholder}) {
           onChange={handleChange}
           value={searchTerm}
         />
-        <SearchIcon size={16} strokeWidth={2.25} />
+        <SearchIcon width={16} height={16} strokeWidth={2.25} />
       </div>
       {searchResults.length > 0 && (
         <div className='absolute left-0 top-full my-1 w-full overflow-y-auto rounded-md border tracking-tight shadow 2xl:text-base'>

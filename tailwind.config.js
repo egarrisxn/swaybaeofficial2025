@@ -6,6 +6,9 @@ module.exports = {
   content: ['./components/**/*.{js,ts,jsx,tsx,mdx}', './app/**/*.{js,ts,jsx,tsx,mdx}'],
   theme: {
     extend: {
+      screens: {
+        xs: '480px',
+      },
       fontFamily: {
         sans: ['var(--font-sans)', ...defaultTheme.fontFamily.sans],
         serif: ['var(--font-serif)', ...defaultTheme.fontFamily.serif],
@@ -59,82 +62,66 @@ module.exports = {
         sm: 'calc(var(--radius) - 4px)',
       },
       keyframes: {
-        appear: {
-          from: {
-            opacity: '0',
-          },
-          to: {
-            opacity: '1',
-          },
+        accordionDown: {
+          from: {height: '0'},
+          to: {height: 'var(--radix-accordion-content-height)'},
         },
+        accordionUp: {
+          from: {height: 'var(--radix-accordion-content-height)'},
+          to: {height: '0'},
+        },
+        appear: {from: {opacity: '0'}, to: {opacity: '1'}},
         cloud: {
-          from: {
-            transform: 'translateX(0)',
-          },
-          to: {
-            transform: 'translateX(calc(-100% - 4rem))',
-          },
-        },
-        marquee: {
-          from: {
-            transform: 'translateX(0)',
-          },
-          to: {
-            transform: 'translateX(calc(-100% - var(--gap)))',
-          },
-        },
-        marqueevertical: {
-          from: {
-            transform: 'translateY(0)',
-          },
-          to: {
-            transform: 'translateY(calc(-100% - var(--gap)))',
-          },
+          from: {transform: 'translateX(0)'},
+          to: {transform: 'translateX(calc(-100% - 4rem))'},
         },
         fade: {
-          from: {
-            opacity: '0',
-          },
-          to: {
-            opacity: '1',
-          },
+          from: {opacity: '0'},
+          to: {opacity: '1'},
         },
         fizzle: {
-          '0%': {
-            opacity: 0,
-            transform: 'translateY(8px)',
-          },
-          '100%': {
-            opacity: 1,
-            transform: 'translateY(0)',
-          },
+          '0%': {opacity: 0, transform: 'translateY(8px)'},
+          '100%': {opacity: 1, transform: 'translateY(0)'},
         },
-        'accordion-down': {
-          from: {
-            height: '0',
-          },
-          to: {
-            height: 'var(--radix-accordion-content-height)',
-          },
+        marquee: {
+          from: {transform: 'translateX(0)'},
+          to: {transform: 'translateX(calc(-100% - var(--gap)))'},
         },
-        'accordion-up': {
-          from: {
-            height: 'var(--radix-accordion-content-height)',
-          },
-          to: {
-            height: '0',
-          },
+        marqueeVertical: {
+          from: {transform: 'translateY(0)'},
+          to: {transform: 'translateY(calc(-100% - var(--gap)))'},
+        },
+
+        slideDownAndFade: {
+          from: {opacity: '0', transform: 'translateY(-2px)'},
+          to: {opacity: '1', transform: 'translateY(0)'},
+        },
+        slideLeftAndFade: {
+          from: {opacity: '0', transform: 'translateX(2px)'},
+          to: {opacity: '1', transform: 'translateX(0)'},
+        },
+        slideUpAndFade: {
+          from: {opacity: '0', transform: 'translateY(2px)'},
+          to: {opacity: '1', transform: 'translateY(0)'},
+        },
+        slideRightAndFade: {
+          from: {opacity: '0', transform: 'translateX(-2px)'},
+          to: {opacity: '1', transform: 'translateX(0)'},
         },
       },
       animation: {
+        accordionDown: 'accordionDown0.2s ease-out',
+        accordionUp: 'accordionUp 0.2s ease-out',
         appear: 'appear 1s ease-in-out',
         cloud: 'cloud 30s linear infinite',
-        marquee: 'marquee var(--duration) linear infinite',
-        marqueevertical: 'marqueevertical var(--duration) linear infinite',
         fade: 'fade 0.5s ease-in',
         fizzle: 'fizzle 0.3s ease-in-out forwards',
-        'accordion-down': 'accordion-down 0.2s ease-out',
-        'accordion-up': 'accordion-up 0.2s ease-out',
+        marquee: 'marquee var(--duration) linear infinite',
+        marqueeVertical: 'marqueeVertical var(--duration) linear infinite',
+        slideDownAndFade: 'slideDownAndFade 400ms cubic-bezier(0.16, 1, 0.3, 1)',
+        slideLeftAndFade: 'slideLeftAndFade 400ms cubic-bezier(0.16, 1, 0.3, 1)',
+        slideUpAndFade: 'slideUpAndFade 400ms cubic-bezier(0.16, 1, 0.3, 1)',
+        slideRightAndFade: 'slideRightAndFade 400ms cubic-bezier(0.16, 1, 0.3, 1)',
       },
     },
   },

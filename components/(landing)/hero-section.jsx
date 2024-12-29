@@ -1,5 +1,5 @@
 import Image from 'next/image'
-import {ChevronsDown} from 'lucide-react'
+import {ChevronDown} from '@/components/(icons)/chevron-down'
 import TextBorder from '@/components/ui/text-border'
 
 //! HERO WITH BOTH
@@ -16,7 +16,7 @@ export default function HeroSection() {
 
       {/* Bottom Text Goes Here */}
       <div className='absolute bottom-5 z-30 flex w-full animate-bounce justify-center text-white lg:bottom-10'>
-        <ChevronsDown className='size-7 md:size-8 lg:size-9 xl:size-10 2xl:size-12' />
+        <ChevronDown className='size-7 md:size-8 lg:size-9 xl:size-10 2xl:size-12' />
       </div>
 
       {/* Black Overlay */}
@@ -77,65 +77,3 @@ export default function HeroSection() {
     </section>
   )
 }
-
-// ! HERO WITH VIDEO
-// export default function HeroSection() {
-//   return (
-//     <section className='relative h-screen w-full overflow-hidden'>
-//       {/* Top Text Goes Here */}
-//       <div className='absolute top-10 z-30 flex w-full justify-center text-white'></div>
-
-//       {/* Middle Text Goes Here */}
-//       <div className='absolute z-30 flex size-full items-center justify-center text-center'>
-//         <TextBorder text='Creator of Chaos' />
-//       </div>
-
-//       {/* Bottom Text Goes Here */}
-//       <div className='absolute bottom-10 z-30 flex w-full justify-center text-2xl text-white'>
-//         <IoIosArrowDown />
-//       </div>
-
-//       {/* Black Overlay */}
-//       <div className='absolute inset-0 z-20 bg-black opacity-50'></div>
-
-//       {/* Video Background for Desktop */}
-//       <div className='absolute inset-0 z-10 hidden size-full md:block'>
-//         <video
-//           aria-hidden='true'
-//           autoPlay
-//           className='pointer-events-none absolute inset-0 size-full object-cover'
-//           loop
-//           muted
-//           playsInline
-//           src='/hero/desktop.mp4'
-//           style={{
-//             maskImage: `linear-gradient(to top, transparent, black 2%)`,
-//           }}
-//         >
-//           Your browser does not support the video tag.
-//         </video>
-//       </div>
-
-//       {/* Video Background for Mobile */}
-//       <div
-//         className='absolute inset-0 z-10 block size-full md:hidden'
-//         style={{paddingBottom: '56.25%'}}
-//       >
-//         <video
-//           aria-hidden='true'
-//           autoPlay
-//           className='pointer-events-none absolute inset-0 size-full object-cover'
-//           loop
-//           muted
-//           playsInline
-//           src='/hero/mobile.mp4'
-//           style={{
-//             maskImage: `linear-gradient(to top, transparent, black 2%)`,
-//           }}
-//         >
-//           Your browser does not support the video tag.
-//         </video>
-//       </div>
-//     </section>
-//   )
-// }

@@ -1,10 +1,10 @@
-import {Users} from 'lucide-react'
+import {UsersIcon} from '@/components/(icons)/users-icon'
 
 export function CommunityHeader() {
   return (
     <div className='mb-12 text-center'>
       <div className='mb-4 inline-flex items-center justify-center rounded-full bg-purple-100 p-2 dark:bg-purple-900'>
-        <Users className='size-6 text-purple-600 dark:text-purple-400' />
+        <UsersIcon className='size-6 text-purple-600 dark:text-purple-400' />
       </div>
       <h1 className='mb-4 font-serif text-4xl font-black tracking-tight text-purple-900 md:text-5xl dark:text-purple-100'>
         Our Community

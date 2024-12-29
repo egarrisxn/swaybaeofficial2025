@@ -90,14 +90,9 @@ export default async function RootLayout({children}) {
   return (
     <html lang='en' suppressHydrationWarning>
       <body
-        className={` ${fugazOne.variable} ${poppins.variable} ${robotoSerif.variable} scroll-smooth antialiased`}
+        className={`${fugazOne.variable} ${poppins.variable} ${robotoSerif.variable} scroll-smooth antialiased`}
       >
-        <ThemeProvider
-          attribute='class'
-          defaultTheme='system'
-          enableSystem
-          disableTransitionOnChange
-        >
+        <ThemeProvider>
           <main className='font-sans'>{children}</main>
         </ThemeProvider>
         {/* <Analytics />

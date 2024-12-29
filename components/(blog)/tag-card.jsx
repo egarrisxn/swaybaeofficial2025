@@ -1,7 +1,7 @@
 import Link from 'next/link'
 import Image from 'next/image'
-import {MoveRight} from 'lucide-react'
 import {urlFor} from '@/lib/sanity/client'
+import {ArrowRight} from '@/components/(icons)/arrow-right'
 import {Button} from '@/components/ui/button'
 import DateBadge from './date-badge'
 
@@ -46,8 +46,9 @@ export default function TagCard({post}) {
             >
               <Link href={`/blog/post/${postSlug}`}>
                 Read Post{' '}
-                <MoveRight
-                  size={16}
+                <ArrowRight
+                  width={16}
+                  height={16}
                   className='-translate-x-1 transition-all duration-300 ease-out group-hover:translate-x-1 group-hover:scale-x-105'
                 />
               </Link>

@@ -1,5 +1,5 @@
 'use client'
-import {ArrowUp} from 'lucide-react'
+import {ArrowUp} from '@/components/(icons)/arrow-up'
 
 export function ScrollToTop({text = 'Back to top'}) {
   const scrollOnClick = () => {
@@ -12,7 +12,8 @@ export function ScrollToTop({text = 'Back to top'}) {
         {text}
       </p>
       <ArrowUp
-        size={16}
+        width={16}
+        height={16}
         className='transition-all duration-300 ease-out group-hover:-translate-y-1 group-hover:scale-105'
       />
     </button>

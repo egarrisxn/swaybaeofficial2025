@@ -15,11 +15,11 @@ const tweets = [
   '1842599642627989733',
 ]
 
-export default function TwitterGrid({}) {
+export function TwitterGrid({}) {
   return (
-    <div className='max-w-md pb-12 md:max-w-4xl'>
+    <div className='max-w-xl pb-12 md:max-w-4xl'>
       <div className='flex w-full items-center justify-center'>
-        <TweetGrid className='w-80 md:w-full' tweets={tweets} columns={2} spacing='lg' />
+        <TweetGrid className='w-full' tweets={tweets} columns={2} spacing='lg' />
       </div>
     </div>
   )

@@ -1,12 +1,12 @@
 import Image from 'next/image'
 import {enrichTweet} from 'react-tweet'
-import {FaXTwitter} from 'react-icons/fa6'
-import {RiVerifiedBadgeFill} from 'react-icons/ri'
 import {cn} from '@/lib/utils'
+import {TwitterIcon} from '@/components/(icons)/twitter-icon'
+import {VerifiedIcon} from '@/components/(icons)/verified-icon'
 
-const Twitter = ({className, ...props}) => <FaXTwitter className={className} {...props} />
+const Twitter = ({className, ...props}) => <TwitterIcon className={className} {...props} />
 
-const Verified = ({className, ...props}) => <RiVerifiedBadgeFill className={className} {...props} />
+const Verified = ({className, ...props}) => <VerifiedIcon className={className} {...props} />
 
 export const truncate = (str, length) => {
   if (!str || str.length <= length) return str
@@ -173,7 +173,7 @@ export const TweetCard = ({tweet, components, className, ...props}) => {
   return (
     <div
       className={cn(
-        'relative flex size-full max-w-lg flex-col gap-1 overflow-hidden rounded-lg border bg-white p-8 shadow-md backdrop-blur-md sm:max-w-xl lg:max-w-lg lg:p-4 xl:p-8 dark:bg-gradient-to-b dark:from-neutral-900 dark:via-neutral-800 dark:to-neutral-900',
+        'relative flex size-full max-w-lg flex-col gap-2 overflow-hidden rounded-lg border border-foreground/20 bg-white p-8 shadow-md sm:max-w-xl lg:max-w-lg lg:p-4 xl:p-8 dark:bg-gradient-to-tr dark:from-black dark:via-slate-900 dark:to-slate-950',
         className,
       )}
       {...props}

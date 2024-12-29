@@ -2,7 +2,6 @@
 import * as React from 'react'
 import {cva} from 'class-variance-authority'
 import {Tweet} from 'react-tweet'
-
 import {cn} from '@/lib/utils'
 
 const tweetGridVariants = cva('max-w-4xl md:max-w-6xl px-2', {

@@ -1,10 +1,10 @@
 import {TooltipButton} from '@/components/tooltip-button'
-import {socials} from '@/lib/data'
+import {socialInfo} from '@/lib/data'
 
 export function SocialIcons() {
   return (
     <>
-      {socials.map((social) => (
+      {socialInfo.map((social) => (
         <TooltipButton
           href={social.href}
           key={social.title}

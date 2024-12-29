@@ -15,10 +15,6 @@ export const metadata = {
   title: 'Landing',
 }
 
-function HR() {
-  return <hr className='h-1 bg-black dark:bg-white' />
-}
-
 export default function LandingPage() {
   return (
     <>
@@ -26,19 +22,19 @@ export default function LandingPage() {
       <AboutSection />
       <SocialRow />
       <YouTubeSection />
-      <HR />
+      <hr className='h-1 bg-black dark:bg-white' />
       <TwitterSection />
-      <HR />
+      <hr className='h-1 bg-black dark:bg-white' />
       <CalendarSection />
-      <HR />
+      <hr className='h-1 bg-black dark:bg-white' />
       <MerchSection />
-      <HR />
+      <hr className='h-1 bg-black dark:bg-white' />
       <BlogSection />
       <BrandRow />
       <div id='contact'>
         <ContactSection />
       </div>
-      <HR />
+      <hr className='h-1 bg-black dark:bg-white' />
       <PhotosSection />
       <TextRow />
     </>

@@ -1,9 +1,8 @@
 'use client'
 import {useCallback} from 'react'
 import {useTheme} from 'next-themes'
-import {MoonIcon} from './moon-icon'
-import {SunIcon} from './sun-icon'
-import {Tooltip} from '@/components/ui/tooltip'
+import {MoonIcon} from '@/components/(icons)/moon-icon'
+import {SunIcon} from '@/components/(icons)/sun-icon'
 
 export default function ThemeToggle() {
   const {resolvedTheme, setTheme} = useTheme()
@@ -13,9 +12,7 @@ export default function ThemeToggle() {
 
   return (
     <button onClick={handleToggleTheme} aria-label='Toggle Theme'>
-      <Tooltip direction='bottom' text={resolvedTheme === 'light' ? 'Dark' : 'Light'}>
-        {resolvedTheme === 'light' ? <MoonIcon /> : <SunIcon />}
-      </Tooltip>
+      {resolvedTheme === 'light' ? <MoonIcon /> : <SunIcon />}
     </button>
   )
 }

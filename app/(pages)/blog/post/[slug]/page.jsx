@@ -1,7 +1,7 @@
 import Image from 'next/image'
 import Link from 'next/link'
 import {notFound} from 'next/navigation'
-import {ArrowLeft, MoveLeft} from 'lucide-react'
+import {ArrowLeft} from '@/components/(icons)/arrow-left'
 import {generateStaticSlugs} from '@/lib/sanity/generateStaticSlugs'
 import {loadPost} from '@/lib/sanity/loadQuery'
 import {urlFor} from '@/lib/sanity/client'
@@ -52,7 +52,7 @@ const PostSlug = ({post}) => {
               href={'/blog'}
               className='group mb-4 flex cursor-pointer items-center gap-1 text-muted-foreground hover:text-primary xl:hidden'
             >
-              <MoveLeft className='ml-1 size-4 transition group-hover:-translate-x-1' />{' '}
+              <ArrowLeft className='ml-1 size-4 transition group-hover:-translate-x-1' />{' '}
               <span className='text-sm uppercase tracking-widest'>Blog</span>
             </Link>
             <h1 className='mb-2.5 text-lg font-medium lg:leading-[1.1] xl:text-xl'>{title}</h1>
@@ -72,7 +72,6 @@ const PostSlug = ({post}) => {
             />
           </section>
           <section className='mb-6 mt-8 flex max-[300px]:max-w-60 sm:mt-10 md:mt-12 lg:mt-14 xl:mt-16'>
-            {/* <div className='prose-a:text-blue hover:prose-a:text-blue-tint prose-code:text-pink prose-th:bg-blue-tint prose-img:shadow-soft hover:prose-img:shadow-hard prose prose-slate mx-auto transition-all ease-in-out md:prose-base lg:prose-lg xl:prose-2xl dark:prose-invert prose-h1:text-primary prose-h2:text-secondary prose-h3:text-primary prose-h4:text-secondary prose-blockquote:border-primary prose-blockquote:text-secondary prose-ol:list-outside prose-ul:list-outside prose-li:leading-normal prose-li:tracking-tight prose-li:marker:text-primary prose-th:text-xl prose-img:w-full'> */}
             <div className='prose prose-slate w-full transition-all ease-in-out md:prose-base lg:prose-lg xl:prose-xl 2xl:prose-2xl dark:prose-invert prose-a:text-blue-500 hover:prose-a:text-blue-600 prose-blockquote:border-primary prose-ol:list-outside prose-ul:list-outside prose-li:leading-normal prose-li:tracking-tight prose-img:w-full prose-img:shadow hover:prose-img:shadow-sm'>
               <CustomPortableText value={content} />
             </div>

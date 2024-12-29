@@ -1,7 +1,7 @@
 'use client'
 import Link from 'next/link'
 import Image from 'next/image'
-import {MoveRight} from 'lucide-react'
+import {ArrowRight} from '@/components/(icons)/arrow-right'
 import {urlFor} from '@/lib/sanity/client'
 import {Button} from '@/components/ui/button'
 import TagBadge from './tag-badge'
@@ -55,8 +55,9 @@ export function PostCard({post, noTagColor = false, isFeatured = false}) {
           >
             <Link href={`/blog/post/${postSlug}`}>
               Continue Reading{' '}
-              <MoveRight
-                size={16}
+              <ArrowRight
+                width={16}
+                height={16}
                 className='-translate-x-1 transition-all duration-300 ease-out group-hover:translate-x-1 group-hover:scale-x-105'
               />
             </Link>

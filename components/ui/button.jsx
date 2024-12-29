@@ -34,7 +34,7 @@ const buttonVariants = cva(
         lg: 'h-12 w-full max-w-lg',
         xl: 'h-12 rounded-md w-full text-base',
         dynamic:
-          'h-8 w-full max-w-[175px] sm:h-9 sm:max-w-[225px] md:h-10 md:max-w-[250px] lg:h-11 lg:max-w-[275px] xl:text-lg xl:h-12 xl:max-w-[325px] 2xl:h-13 2xl:max-w-[350px]',
+          'h-8 w-full max-w-[175px] sm:h-9 sm:max-w-[225px] md:h-10 md:max-w-[250px] lg:h-11 lg:max-w-[275px] xl:text-lg xl:h-12 xl:max-w-[300px] 2xl:h-13 2xl:max-w-[325px]',
       },
     },
     defaultVariants: {
@@ -48,6 +48,7 @@ const Button = React.forwardRef(({className, variant, size, asChild = false, ...
   const Comp = asChild ? Slot : 'button'
   return <Comp className={cn(buttonVariants({variant, size, className}))} ref={ref} {...props} />
 })
+
 Button.displayName = 'Button'
 
 export {Button, buttonVariants}
