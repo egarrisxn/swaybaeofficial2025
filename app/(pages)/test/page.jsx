@@ -11,7 +11,14 @@ import {HoverButton} from '@/components/unused/hover-button'
 import {HamburgerButton} from '@/components/unused/hamburger-button'
 import {FlowerNav} from '@/components/unused/flower-nav'
 import {SpotlightCardGroup} from '@/components/unused/spotlight-card-group'
-import SpinwheelCarousel from '@/components/unused/spinwheel-carousel'
+import {SpinwheelCarousel} from '@/components/unused/spinwheel-carousel'
+import {ColoredSocialIcons} from '@/components/unused/colored-social-icons'
+import {SpinningIcons} from '@/components/unused/spinning-icons'
+import {NeonText} from '@/components/unused/neon-text'
+import {FluidText} from '@/components/unused/fluid-text'
+import {Dock} from '@/components/unused/dock'
+import {NavigationPopover} from '@/components/unused/navigation-popover'
+import {ShiftTabs} from '@/components/unused/shift-tabs'
 
 export default function TestPage() {
   return (
@@ -58,6 +65,39 @@ export default function TestPage() {
         </section>
         <section className='mx-auto grid min-h-screen w-full grid-cols-1 place-items-center border px-2'>
           <SpinwheelCarousel />
+        </section>
+        <section className='mx-auto grid min-h-screen w-full grid-cols-1 place-items-center border px-2'>
+          <ColoredSocialIcons />
+        </section>
+        <section className='mx-auto grid min-h-screen w-full grid-cols-1 place-items-center border px-2'>
+          <SpinningIcons />
+        </section>
+        <section className='mx-auto grid min-h-screen w-full grid-cols-1 place-items-center border px-2'>
+          <NeonText />
+        </section>
+        <section className='mx-auto grid min-h-screen w-full grid-cols-1 place-items-center border px-2'>
+          <FluidText />
+        </section>
+        <section className='mx-auto grid min-h-screen w-full grid-cols-1 place-items-center border px-2'>
+          <Dock />
+        </section>
+        <section className='mx-auto grid min-h-screen w-full grid-cols-1 place-items-center border px-2'>
+          <NavigationPopover />
+        </section>
+        <section className='mx-auto grid min-h-screen w-full grid-cols-1 place-items-center border px-2'>
+          <ShiftTabs
+            items={[
+              'About',
+              'Calendar',
+              'Community',
+              'Blog',
+              'Contact',
+              'Social',
+              'Media Kit',
+              'FAQ',
+              'Store',
+            ]}
+          />
         </section>
       </div>
     </div>

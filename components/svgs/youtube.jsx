@@ -1,10 +1,10 @@
 const YouTube = (props) => (
   <svg
-    viewBox='0 0 256 180'
-    width='1.5em'
-    height='1.5em'
     xmlns='http://www.w3.org/2000/svg'
     preserveAspectRatio='xMidYMid'
+    viewBox='0 0 256 180'
+    width='2em'
+    height='2em'
     {...props}
   >
     <path

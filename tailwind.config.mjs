@@ -60,6 +60,9 @@ const config = {
         md: 'calc(var(--radius) - 2px)',
         sm: 'calc(var(--radius) - 4px)',
       },
+      fontSize: {
+        fluid: 'clamp(32px, 10vw, 200px)',
+      },
       screens: {
         xs: '480px',
         '3xl': '1740px',
@@ -107,6 +110,7 @@ const config = {
             transform: 'translateY(0)',
           },
         },
+
         gradientX: {
           '0%, 100%': {
             'background-size': '200% 200%',
@@ -151,6 +155,16 @@ const config = {
           },
           to: {
             transform: 'translateY(calc(-100% - var(--gap)))',
+          },
+        },
+        neonGlow: {
+          '0%': {
+            textShadow:
+              '0 0 5px #ff005e, 0 0 10px #ff005e, 0 0 20px #ff005e, 0 0 40px #ff005e, 0 0 80px #ff005e',
+          },
+          '100%': {
+            textShadow:
+              '0 0 10px #00d4ff, 0 0 20px #00d4ff, 0 0 40px #00d4ff, 0 0 80px #00d4ff, 0 0 160px #00d4ff',
           },
         },
         slideDownAndFade: {
@@ -205,6 +219,7 @@ const config = {
         gradientXY: 'gradientXY 10s ease infinite',
         marquee: 'marquee var(--duration) linear infinite',
         marqueeVertical: 'marqueeVertical var(--duration) linear infinite',
+        neonGlow: 'neonGlow 1.5s infinite alternate',
         slideDownAndFade: 'slideDownAndFade 400ms cubic-bezier(0.16, 1, 0.3, 1)',
         slideLeftAndFade: 'slideLeftAndFade 400ms cubic-bezier(0.16, 1, 0.3, 1)',
         slideUpAndFade: 'slideUpAndFade 400ms cubic-bezier(0.16, 1, 0.3, 1)',

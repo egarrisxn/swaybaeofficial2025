@@ -9,8 +9,8 @@ const Twitch = (props) => (
       enableBackground: 'new 0 0 2400 2800',
     }}
     viewBox='0 0 2400 2800'
-    width='1.5em'
-    height='1.5em'
+    width='2em'
+    height='2em'
     {...props}
   >
     <style>{'.st1{fill:#9146ff}'}</style>
