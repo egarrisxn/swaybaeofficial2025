@@ -52,7 +52,7 @@ export function CardStack() {
         return (
           <motion.div
             key={card.id}
-            className='xs:min-w-[19rem] xs:max-w-[26rem] xs:min-h-96 absolute flex size-fit min-w-48 max-w-[17rem] flex-col justify-between rounded-3xl border bg-white p-2 shadow-xl sm:min-h-[30rem] sm:min-w-96 dark:bg-black'
+            className='absolute flex size-fit min-w-48 max-w-[17rem] flex-col justify-between rounded-3xl border bg-white p-2 shadow-xl xs:min-h-96 xs:min-w-[19rem] xs:max-w-[26rem] sm:min-h-[30rem] sm:min-w-96 dark:bg-black'
             style={{
               zIndex: stack.length - index,
             }}

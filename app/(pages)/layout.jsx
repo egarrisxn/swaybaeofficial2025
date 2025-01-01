@@ -1,5 +1,5 @@
-import {Header} from '../_components/header'
-import {Footer} from '../_components/footer'
+import {Header} from '@/components/header'
+import {Footer} from '@/components/footer'
 
 export default function PagesLayout({children}) {
   return (
@@ -8,7 +8,7 @@ export default function PagesLayout({children}) {
       <Header isSticky={false} />
 
       {/* MAIN */}
-      <div>{children}</div>
+      <main>{children}</main>
 
       {/* FOOTER */}
       <Footer hasScroll={false} />

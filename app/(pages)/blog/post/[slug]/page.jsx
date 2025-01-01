@@ -1,14 +1,14 @@
 import Image from 'next/image'
 import Link from 'next/link'
 import {notFound} from 'next/navigation'
-import {ArrowLeft} from '@/components/(icons)/arrow-left'
+import {ArrowLeft} from '@/components/icons/arrow-left'
 import {generateStaticSlugs} from '@/lib/sanity/generateStaticSlugs'
 import {loadPost} from '@/lib/sanity/loadQuery'
 import {urlFor} from '@/lib/sanity/client'
-import TableOfContent from '@/components/(blog)/table-of-content'
-import TagBadge from '@/components/(blog)/tag-badge'
-import DateBadge from '@/components/(blog)/date-badge'
-import CustomPortableText from '@/components/(blog)/portable-text'
+import TableOfContent from '@/components/blog/table-of-content'
+import TagBadge from '@/components/blog/tag-badge'
+import DateBadge from '@/components/blog/date-badge'
+import CustomPortableText from '@/components/blog/portable-text'
 
 export function generateStaticParams() {
   return generateStaticSlugs('post')

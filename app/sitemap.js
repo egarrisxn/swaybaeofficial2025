@@ -14,10 +14,7 @@ export default async function sitemap() {
       url: `${baseUrl}/about`,
       lastModified: new Date().toISOString(),
     },
-    {
-      url: `${baseUrl}/blog`,
-      lastModified: new Date().toISOString(),
-    },
+
     {
       url: `${baseUrl}/calendar`,
       lastModified: new Date().toISOString(),
@@ -27,15 +24,11 @@ export default async function sitemap() {
       lastModified: new Date().toISOString(),
     },
     {
+      url: `${baseUrl}/blog`,
+      lastModified: new Date().toISOString(),
+    },
+    {
       url: `${baseUrl}/contact`,
-      lastModified: new Date().toISOString(),
-    },
-    {
-      url: `${baseUrl}/faq`,
-      lastModified: new Date().toISOString(),
-    },
-    {
-      url: `${baseUrl}/media-kit`,
       lastModified: new Date().toISOString(),
     },
     {
@@ -43,7 +36,11 @@ export default async function sitemap() {
       lastModified: new Date().toISOString(),
     },
     {
-      url: `${baseUrl}/subathon`,
+      url: `${baseUrl}/media-kit`,
+      lastModified: new Date().toISOString(),
+    },
+    {
+      url: `${baseUrl}/faq`,
       lastModified: new Date().toISOString(),
     },
   ]

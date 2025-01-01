@@ -2,9 +2,38 @@
 import {useState, useEffect, forwardRef} from 'react'
 import {MotionConfig, motion} from 'motion/react'
 
-const HamburgerButton = forwardRef(({onClick, open}, ref) => {
-  return <AnimatedHamburgerButton ref={ref} onClick={onClick} open={open} />
-})
+const VARIANTS = {
+  top: {
+    open: {
+      rotate: ['0deg', '0deg', '45deg'],
+      top: ['35%', '50%', '50%'],
+    },
+    closed: {
+      rotate: ['45deg', '0deg', '0deg'],
+      top: ['50%', '50%', '35%'],
+    },
+  },
+  middle: {
+    open: {
+      rotate: ['0deg', '0deg', '-45deg'],
+    },
+    closed: {
+      rotate: ['-45deg', '0deg', '0deg'],
+    },
+  },
+  bottom: {
+    open: {
+      rotate: ['0deg', '0deg', '45deg'],
+      bottom: ['35%', '50%', '50%'],
+      left: '50%',
+    },
+    closed: {
+      rotate: ['45deg', '0deg', '0deg'],
+      bottom: ['50%', '50%', '35%'],
+      left: 'calc(50% + 10px)',
+    },
+  },
+}
 
 const AnimatedHamburgerButton = forwardRef(({onClick, open}, ref) => {
   const [active, setActive] = useState(false)
@@ -58,40 +87,12 @@ const AnimatedHamburgerButton = forwardRef(({onClick, open}, ref) => {
   )
 })
 
-HamburgerButton.displayName = 'HamburgerButton'
 AnimatedHamburgerButton.displayName = 'AnimatedHamburgerButton'
 
-const VARIANTS = {
-  top: {
-    open: {
-      rotate: ['0deg', '0deg', '45deg'],
-      top: ['35%', '50%', '50%'],
-    },
-    closed: {
-      rotate: ['45deg', '0deg', '0deg'],
-      top: ['50%', '50%', '35%'],
-    },
-  },
-  middle: {
-    open: {
-      rotate: ['0deg', '0deg', '-45deg'],
-    },
-    closed: {
-      rotate: ['-45deg', '0deg', '0deg'],
-    },
-  },
-  bottom: {
-    open: {
-      rotate: ['0deg', '0deg', '45deg'],
-      bottom: ['35%', '50%', '50%'],
-      left: '50%',
-    },
-    closed: {
-      rotate: ['45deg', '0deg', '0deg'],
-      bottom: ['50%', '50%', '35%'],
-      left: 'calc(50% + 10px)',
-    },
-  },
-}
+const HamburgerButton = forwardRef(({onClick, open}, ref) => {
+  return <AnimatedHamburgerButton ref={ref} onClick={onClick} open={open} />
+})
 
-export default HamburgerButton
+HamburgerButton.displayName = 'HamburgerButton'
+
+export {HamburgerButton}

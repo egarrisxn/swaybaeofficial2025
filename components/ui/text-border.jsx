@@ -45,7 +45,7 @@ export default function TextBorder({text = 'Creator of Chaos', className}) {
       </div>
       <span
         className={cn(
-          'text-5xl font-black leading-none tracking-tighter text-white drop-shadow md:text-7xl lg:text-8xl xl:text-9xl 2xl:text-[9rem]',
+          'text-5xl font-black leading-none tracking-tighter text-foreground text-white drop-shadow md:text-7xl lg:text-8xl xl:text-9xl 2xl:text-[9rem]',
           className,
         )}
       >

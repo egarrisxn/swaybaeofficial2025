@@ -1,8 +1,9 @@
-import FlowerMenu from './ui/flower-menu'
+import FlowerMenu from '@/components/ui/flower-menu'
 
-export default function FlowerNav() {
+export function FlowerNav() {
   return (
-    <div className='fixed bottom-0 right-0 z-50'>
+    // <div className='fixed bottom-0 right-0 z-50'>
+    <div className='z-50'>
       <FlowerMenu
         menuItems={[
           {href: '/contact', text: 'Contact-'},

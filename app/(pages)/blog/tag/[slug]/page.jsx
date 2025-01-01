@@ -1,8 +1,8 @@
 import {notFound} from 'next/navigation'
 import {generateStaticSlugs} from '@/lib/sanity/generateStaticSlugs'
 import {loadTag} from '@/lib/sanity/loadQuery'
-import PageHeader from '@/components/(blog)/page-header'
-import TagCard from '@/components/(blog)/tag-card'
+import PageHeader from '@/components/blog/page-header'
+import TagCard from '@/components/blog/tag-card'
 
 export function generateStaticParams() {
   return generateStaticSlugs('tag')
@@ -35,7 +35,7 @@ const TagSlug = ({tag}) => {
             linkHref='/blog'
             linkText='Back'
           />
-          <h2 className='mb-[1.25em] mt-[1.25em] font-serif text-[1.5em] font-bold leading-snug text-[#111827] xl:text-[1.9em] xl:leading-none dark:text-white'>
+          <h2 className='my-5 font-serif text-[1.5rem] font-bold leading-snug text-[#111827] xl:text-[2.0rem] xl:leading-none dark:text-white'>
             {title}
           </h2>
           <hr className='mb-12' />

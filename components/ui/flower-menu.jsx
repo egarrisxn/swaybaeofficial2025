@@ -1,5 +1,5 @@
 'use client'
-import { useState } from 'react'
+import {useState} from 'react'
 import Link from 'next/link'
 
 const MenuToggler = ({
@@ -23,7 +23,7 @@ const MenuToggler = ({
         checked={isOpen}
         onChange={onChange}
         className='absolute inset-0 z-10 m-auto cursor-pointer opacity-0'
-        style={{ width: togglerSize, height: togglerSize }}
+        style={{width: togglerSize, height: togglerSize}}
       />
       <label
         htmlFor='menu-toggler'
@@ -38,7 +38,7 @@ const MenuToggler = ({
       >
         <span
           className='relative flex flex-col items-center justify-center'
-          style={{ width: itemSize, height: itemSize }}
+          style={{width: itemSize, height: itemSize}}
         >
           {[0, 1, 2].map((i) => (
             <span
@@ -66,33 +66,22 @@ const MenuToggler = ({
   )
 }
 
-const MenuItem = ({
-  item,
-  index,
-  isOpen,
-  animationDuration,
-  itemCount,
-  toggleSize,
-}) => {
-    const startAngle = 0;
-    const endAngle = 90;
-    const angleRange = endAngle - startAngle;
-    const itemAngle = startAngle + (angleRange / (itemCount - 1)) * index;
-    const translateX = toggleSize + 15;
-    const textWidth = toggleSize + 0;
-    const textHeight = toggleSize - 60;
+const MenuItem = ({item, index, isOpen, animationDuration, itemCount, toggleSize}) => {
+  const startAngle = 0
+  const endAngle = 90
+  const angleRange = endAngle - startAngle
+  const itemAngle = startAngle + (angleRange / (itemCount - 1)) * index
+  const translateX = toggleSize + 15
+  const textWidth = toggleSize + 0
+  const textHeight = toggleSize - 60
 
   return (
     <li
-      className={`absolute inset-0 m-auto transition-all ${
-        isOpen ? 'opacity-100' : 'opacity-0'
-      }`}
+      className={`absolute inset-0 m-auto transition-all ${isOpen ? 'opacity-100' : 'opacity-0'}`}
       style={{
         width: textWidth,
         height: textHeight,
-        transform: isOpen
-          ? `rotate(${itemAngle}deg) translateX(-${translateX}px)`
-          : 'none',
+        transform: isOpen ? `rotate(${itemAngle}deg) translateX(-${translateX}px)` : 'none',
         transitionDuration: `${animationDuration}ms`,
       }}
     >
@@ -105,12 +94,17 @@ const MenuItem = ({
           transitionDuration: `${animationDuration}ms`,
         }}
       >
+        <span
+          className='relative flex items-center justify-center'
+          style={{transform: `translateX(${isOpen ? 0 : -10}px) rotate(-${itemAngle}deg)`}}
+        >
           <span
-              className="relative flex items-center justify-center"
-              style={{transform: `translateX(${isOpen ? 0 : -10}px) rotate(-${itemAngle}deg)`}}
+            className='rounded-3xl border bg-red-500/10 pl-1 text-2xl font-bold leading-[1rem] tracking-[0.7rem] transition-transform duration-200'
+            style={{transform: `rotate(${itemAngle}deg)`}}
           >
-              <span className="text-2xl font-bold border rounded-3xl bg-red-500/10 pl-1 tracking-[0.7rem] leading-[1rem] transition-transform duration-200" style={{transform: `rotate(${itemAngle}deg)`}}>{item.text}</span>
+            {item.text}
           </span>
+        </span>
       </Link>
     </li>
   )
@@ -127,7 +121,7 @@ export default function FlowerMenu({
   const itemCount = menuItems.length
   const toggleSize = togglerSize * 1
   const itemSize = Math.max(24, Math.floor(togglerSize * 0.5))
-  const containerSize = togglerSize * 2;
+  const containerSize = togglerSize * 2
 
   return (
     <nav className='relative' style={{width: containerSize, height: containerSize}}>

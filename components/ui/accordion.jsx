@@ -2,7 +2,7 @@
 import * as React from 'react'
 import * as AccordionPrimitive from '@radix-ui/react-accordion'
 import {cn} from '@/lib/utils'
-import {ChevronDown} from '@/components/(icons)/chevron-down'
+import {ChevronDown} from '@/components/icons/chevron-down'
 
 const Accordion = AccordionPrimitive.Root
 
@@ -31,7 +31,7 @@ AccordionTrigger.displayName = AccordionPrimitive.Trigger.displayName
 const AccordionContent = React.forwardRef(({className, children, ...props}, ref) => (
   <AccordionPrimitive.Content
     ref={ref}
-    className='data-[state=closed]:animate-accordionUp data-[state=open]:animate-accordionDown overflow-hidden text-sm'
+    className='overflow-hidden text-sm data-[state=closed]:animate-accordionUp data-[state=open]:animate-accordionDown'
     {...props}
   >
     <div className={cn('pb-4 pt-0', className)}>{children}</div>

@@ -1,7 +1,7 @@
 import {Button} from '@/components/ui/button'
 import {Particles} from '@/components/ui/particles'
 
-export default function ParticlesButton() {
+export function ParticlesButton() {
   return (
     <div className='relative justify-center'>
       <Particles

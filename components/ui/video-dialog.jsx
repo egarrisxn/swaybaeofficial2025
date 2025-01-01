@@ -3,8 +3,8 @@ import Image from 'next/image'
 import {useState} from 'react'
 import {AnimatePresence, motion} from 'motion/react'
 import {cn} from '@/lib/utils'
-import {CloseIcon} from '@/components/(icons)/close-icon'
-import {PlayIcon} from '@/components/(icons)/play-icon'
+import {CloseIcon} from '@/components/icons/close-icon'
+import {PlayIcon} from '@/components/icons/play-icon'
 
 const animationVariants = {
   'from-bottom': {

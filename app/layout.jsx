@@ -1,6 +1,7 @@
-import './globals.css'
+import {ViewTransitions} from 'next-view-transitions'
 import {Fugaz_One, Poppins, Roboto_Serif} from 'next/font/google'
 import {ThemeProvider} from './theme-provider'
+import './globals.css'
 // import {Analytics} from '@vercel/analytics/react'
 // import {SpeedInsights} from '@vercel/speed-insights/next'
 
@@ -88,16 +89,14 @@ export const viewport = {
 
 export default async function RootLayout({children}) {
   return (
-    <html lang='en' suppressHydrationWarning>
-      <body
-        className={`${fugazOne.variable} ${poppins.variable} ${robotoSerif.variable} scroll-smooth antialiased`}
-      >
-        <ThemeProvider>
-          <main className='font-sans'>{children}</main>
-        </ThemeProvider>
-        {/* <Analytics />
+    <ViewTransitions>
+      <html lang='en' suppressHydrationWarning>
+        <body className={`${fugazOne.variable} ${poppins.variable} ${robotoSerif.variable}`}>
+          <ThemeProvider>{children}</ThemeProvider>
+          {/* <Analytics />
         <SpeedInsights /> */}
-      </body>
-    </html>
+        </body>
+      </html>
+    </ViewTransitions>
   )
 }

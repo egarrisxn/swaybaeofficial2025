@@ -1,11 +1,11 @@
-import {TwitchIcon} from '@/components/(icons)/twitch-icon'
-import {YoutubeIcon} from '@/components/(icons)/youtube-icon'
-import {TiktokIcon} from '@/components/(icons)/tiktok-icon'
-import {TwitterIcon} from '@/components/(icons)/twitter-icon'
-import {BlueskyIcon} from '@/components/(icons)/bluesky-icon'
-import {InstagramIcon} from '@/components/(icons)/instagram-icon'
-import {DiscordIcon} from '@/components/(icons)/discord-icon'
-import {SpotifyIcon} from '@/components/(icons)/spotify-icon'
+import {TwitchIcon} from '@/components/icons/twitch-icon'
+import {YoutubeIcon} from '@/components/icons/youtube-icon'
+import {TiktokIcon} from '@/components/icons/tiktok-icon'
+import {TwitterIcon} from '@/components/icons/twitter-icon'
+import {BlueskyIcon} from '@/components/icons/bluesky-icon'
+import {InstagramIcon} from '@/components/icons/instagram-icon'
+import {DiscordIcon} from '@/components/icons/discord-icon'
+import {SpotifyIcon} from '@/components/icons/spotify-icon'
 
 //! NAVIGATION
 export const navLinks = [
@@ -14,8 +14,8 @@ export const navLinks = [
   {href: '/calendar', label: 'Calendar'},
   {href: '/community', label: 'Community'},
   {href: '/blog', label: 'Blog'},
-  {href: '/social', label: 'Social'},
   {href: '/contact', label: 'Contact'},
+  {href: '/social', label: 'Social'},
   {href: '/media-kit', label: 'Media Kit'},
   {href: '/faq', label: 'FAQ'},
   {href: 'https://shop.swaybae.net/', label: 'Store', external: true},
