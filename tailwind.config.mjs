@@ -67,6 +67,10 @@ const config = {
         xs: '480px',
         '3xl': '1740px',
       },
+      // backgroundImage: {
+      //   'hero-img': "url('https://picsum.photos/1920/1920/?random')",
+      //   'body-img': "url('https://picsum.photos/1600/1600/?random')",
+      // },
       keyframes: {
         accordionDown: {
           from: {

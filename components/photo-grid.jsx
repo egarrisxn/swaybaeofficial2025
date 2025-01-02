@@ -1,23 +1,12 @@
 import Image from 'next/image'
 import {BlurFade} from '@/components/ui/blur-fade'
-
-const images = [
-  '/grid/1.jpg',
-  '/grid/2.jpg',
-  '/grid/3.jpg',
-  '/grid/4.jpg',
-  '/grid/5.jpg',
-  '/grid/6.jpg',
-  '/grid/7.jpg',
-  '/grid/8.jpg',
-  '/grid/9.jpg',
-]
+import {imageGrid} from '@/lib/data'
 
 export function PhotoGrid() {
   return (
     <section id='photos'>
       <div className='columns-2 gap-4 md:columns-3 md:gap-6'>
-        {images.map((imageUrl, idx) => {
+        {imageGrid.map((imageUrl, idx) => {
           const width = 800
           const height = 600
           return (

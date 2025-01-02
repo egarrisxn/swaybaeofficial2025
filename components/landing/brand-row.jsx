@@ -1,6 +1,6 @@
-import {brandIcons} from '@/lib/data'
 import {Marquee} from '@/components/ui/marquee'
 import {BrandCard} from '@/components/brand-card'
+import {brandIcons} from '@/lib/data'
 
 export default function BrandRow() {
   return (

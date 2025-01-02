@@ -1,119 +1,128 @@
-'use client'
-import {Card} from '@/components/ui/card'
-import {Badge} from '@/components/ui/badge'
-import {ScrollArea} from '@/components/ui/scroll-area'
+import {
+  Accordion,
+  AccordionContent,
+  AccordionItem,
+  AccordionTrigger,
+} from '@/components/ui/accordion'
 import {Crown, Skull, Ghost, Moon, Star, Flame} from 'lucide-react'
-import {motion} from 'motion/react'
-
-const tierIcons = {
-  'TRICK OR TREATER 2024': Ghost,
-  'ACOLYTE OF THE SPECTER': Skull,
-  'WARDEN OF THE WICKED': Moon,
-  'KEEPER OF SOULS': Star,
-  'THE HAUNTED MONARCH': Crown,
-  'THE ETERNAL NIGHTMARE': Flame,
-}
-
-const tierData = [
-  {
-    tier: 'TRICK OR TREATER 2024',
-    buy: 15,
-    buyers: [
-      'adinsxytoje',
-      'alistair_covax',
-      'alpha_pt_',
-      'biscotti',
-      'chillestialhs',
-      'devtron25',
-      'IteukkaI',
-      'orbitalsky210',
-      'owlicioushs',
-      'proffaridoon',
-      'sinkdb_',
-      'tatsumasa',
-      'twiztid_c',
-    ],
-  },
-  {
-    tier: 'ACOLYTE OF THE SPECTER',
-    buy: 40,
-    buyers: ['darthkek69'],
-  },
-  {
-    tier: 'WARDEN OF THE WICKED',
-    buy: 50,
-    buyers: ['aelund_', 'ggsutton', 'phyrelight', 'sinkdb_', 'yahli27tv', 'yaltus'],
-  },
-  {
-    tier: 'KEEPER OF SOULS',
-    buy: 75,
-    buyers: ['alistair_covax', 'darkmek131', 'momoretta', 'nexusshade', 'owlicioushs', 'tatsumasa'],
-  },
-  {
-    tier: 'THE HAUNTED MONARCH',
-    buy: 100,
-    buyers: ['owlicioushs', 'proffaridoon'],
-  },
-  {
-    tier: 'THE ETERNAL NIGHTMARE',
-    buy: 150,
-    buyers: [
-      'biscotti',
-      'chillestialhs',
-      'comiclzz',
-      'ericshinss',
-      'jawbonetheclown',
-      'momoretta',
-      'twiztid_c',
-      'worldofhaganation',
-    ],
-  },
-]
 
 export default function TierList() {
   return (
-    <div className='space-y-8'>
-      {tierData.map((tier, index) => {
-        const Icon = tierIcons[tier.tier]
-        return (
-          <motion.div
-            key={index}
-            initial={{opacity: 0, y: 20}}
-            animate={{opacity: 1, y: 0}}
-            transition={{duration: 0.5, delay: index * 0.1}}
-          >
-            <Card className='overflow-hidden bg-white/90 backdrop-blur-lg transition-all hover:shadow-lg dark:bg-black/90'>
-              <div className='border-b border-purple-100 bg-gradient-to-r from-purple-500/10 to-pink-500/10 p-6 dark:border-purple-900'>
-                <div className='flex items-center gap-2 sm:gap-3'>
-                  <Icon className='size-5 text-purple-600 sm:size-6 dark:text-purple-400' />
-                  <h2 className='font-bold tracking-tight text-purple-900 sm:text-lg dark:text-purple-100'>
-                    {tier.tier}
-                  </h2>
-                  <Badge
-                    variant='secondary'
-                    className='ml-auto bg-purple-100 text-purple-900 dark:bg-purple-900 dark:text-purple-100'
-                  >
-                    Buy: {tier.buy}
-                  </Badge>
+    <section className='pb-12'>
+      <div className='container mx-auto my-24 max-w-2xl px-4 lg:max-w-7xl xl:px-0'>
+        <div className='grid max-w-[65ch] grid-cols-1 leading-relaxed xl:max-w-[80ch]'>
+          <Accordion type='single' collapsible className='w-full'>
+            <AccordionItem value='item-1'>
+              <AccordionTrigger>
+                <div className='flex flex-row items-center gap-2 text-sm font-semibold tracking-wide text-purple-900 md:text-base lg:text-lg xl:gap-3 xl:text-xl 2xl:text-2xl dark:text-purple-100'>
+                  <Ghost className='size-5 text-purple-600 md:size-6 xl:size-7 dark:text-purple-400' />
+                  TRICK OR TREATER 2024
                 </div>
-              </div>
-              <ScrollArea className='h-full p-6'>
-                <div className='grid grid-cols-1 gap-3 md:grid-cols-2 xl:grid-cols-3'>
-                  {tier.buyers.map((buyer, idx) => (
-                    <div
-                      key={idx}
-                      className='flex items-center gap-2 rounded-lg bg-purple-50 px-3 py-2 text-sm text-purple-900 transition-colors hover:bg-purple-100 dark:bg-purple-900/30 dark:text-purple-100 dark:hover:bg-purple-800/50'
-                    >
-                      <div className='size-2 rounded-full bg-purple-500' />
-                      {buyer}
-                    </div>
-                  ))}
+              </AccordionTrigger>
+              <AccordionContent>
+                <ol className='list-inside list-disc pl-2 text-xs md:space-y-0.5 md:text-sm lg:text-base xl:space-y-1 xl:text-lg 2xl:text-xl'>
+                  <li>adinsxytoje</li>
+                  <li>alistair_covax</li>
+                  <li>alpha_pt_</li>
+                  <li>biscotti</li>
+                  <li>chillestialhs</li>
+                  <li>devtron25</li>
+                  <li>IteukkaI</li>
+                  <li>orbitalsky210</li>
+                  <li>owlicioushs</li>
+                  <li>proffaridoon</li>
+                  <li>sinkdb_</li>
+                  <li>tatsumasa</li>
+                  <li>twiztid_c</li>
+                </ol>
+              </AccordionContent>
+            </AccordionItem>
+            <AccordionItem value='item-2'>
+              <AccordionTrigger>
+                <div className='flex flex-row items-center gap-2 text-sm font-semibold tracking-wide text-purple-900 md:text-base lg:text-lg xl:gap-3 xl:text-xl 2xl:text-2xl dark:text-purple-100'>
+                  <Skull className='size-5 text-purple-600 md:size-6 xl:size-7 dark:text-purple-400' />
+                  ACOLYTE OF THE SPECTER
                 </div>
-              </ScrollArea>
-            </Card>
-          </motion.div>
-        )
-      })}
-    </div>
+              </AccordionTrigger>
+              <AccordionContent>
+                <ol className='list-inside list-disc pl-2 text-xs md:space-y-0.5 md:text-sm lg:text-base xl:space-y-1 xl:text-lg 2xl:text-xl'>
+                  <li>darthkek69</li>
+                </ol>
+              </AccordionContent>
+            </AccordionItem>
+            <AccordionItem value='item-3'>
+              <AccordionTrigger>
+                <div className='flex flex-row items-center gap-2 text-sm font-semibold tracking-wide text-purple-900 md:text-base lg:text-lg xl:gap-3 xl:text-xl 2xl:text-2xl dark:text-purple-100'>
+                  <Moon className='size-5 text-purple-600 md:size-6 xl:size-7 dark:text-purple-400' />
+                  WARDEN OF THE WICKED
+                </div>
+              </AccordionTrigger>
+              <AccordionContent>
+                <ol className='list-inside list-disc pl-2 text-xs md:space-y-0.5 md:text-sm lg:text-base xl:space-y-1 xl:text-lg 2xl:text-xl'>
+                  <li>aelund_</li>
+                  <li>ggsutton</li>
+                  <li>phyrelight</li>
+                  <li>sinkdb_</li>
+                  <li>yahli27tv</li>
+                  <li>yaltus</li>
+                </ol>
+              </AccordionContent>
+            </AccordionItem>
+            <AccordionItem value='item-4'>
+              <AccordionTrigger>
+                <div className='flex flex-row items-center gap-2 text-sm font-semibold tracking-wide text-purple-900 md:text-base lg:text-lg xl:gap-3 xl:text-xl 2xl:text-2xl dark:text-purple-100'>
+                  <Star className='size-5 text-purple-600 md:size-6 xl:size-7 dark:text-purple-400' />
+                  KEEPERS OF SOULS
+                </div>
+              </AccordionTrigger>
+              <AccordionContent>
+                <ol className='list-inside list-disc pl-2 text-xs md:space-y-0.5 md:text-sm lg:text-base xl:space-y-1 xl:text-lg 2xl:text-xl'>
+                  <li>alistair_covax</li>
+                  <li>darkmek131</li>
+                  <li>momoretta</li>
+                  <li>nexusshade</li>
+                  <li>owlicioushs</li>
+                  <li>tatsumasa</li>
+                </ol>
+              </AccordionContent>
+            </AccordionItem>
+            <AccordionItem value='item-5'>
+              <AccordionTrigger>
+                <div className='flex flex-row items-center gap-2 text-sm font-semibold tracking-wide text-purple-900 md:text-base lg:text-lg xl:gap-3 xl:text-xl 2xl:text-2xl dark:text-purple-100'>
+                  <Crown className='size-5 text-purple-600 md:size-6 xl:size-7 dark:text-purple-400' />
+                  THE HAUNTED MONARCH
+                </div>
+              </AccordionTrigger>
+              <AccordionContent>
+                <ol className='list-inside list-disc pl-2 text-xs md:space-y-0.5 md:text-sm lg:text-base xl:space-y-1 xl:text-lg 2xl:text-xl'>
+                  <li>owlicioushs</li>
+                  <li>proffaridoon</li>
+                </ol>
+              </AccordionContent>
+            </AccordionItem>
+            <AccordionItem value='item-6'>
+              <AccordionTrigger>
+                <div className='flex flex-row items-center gap-2 text-sm font-semibold tracking-wide text-purple-900 transition-colors md:text-base lg:text-lg xl:gap-3 xl:text-xl 2xl:text-2xl dark:text-purple-100'>
+                  <Flame className='size-5 text-purple-600 md:size-6 xl:size-7 dark:text-purple-400' />
+                  THE ETERNAL NIGHTMARE
+                </div>
+              </AccordionTrigger>
+              <AccordionContent>
+                <ol className='list-inside list-disc pl-2 text-xs md:space-y-0.5 md:text-sm lg:text-base xl:space-y-1 xl:text-lg 2xl:text-xl'>
+                  <li>biscotti</li>
+                  <li>chillestialhs</li>
+                  <li>comiclzz</li>
+                  <li>ericshinss</li>
+                  <li>jawbonetheclown</li>
+                  <li>momoretta</li>
+                  <li>twiztid_c</li>
+                  <li>worldofhaganation</li>
+                </ol>
+              </AccordionContent>
+            </AccordionItem>
+          </Accordion>
+        </div>
+      </div>
+    </section>
   )
 }

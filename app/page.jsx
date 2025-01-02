@@ -9,7 +9,7 @@ import BlogSection from '@/components/landing/blog-section'
 import BrandRow from '@/components/landing/brand-row'
 import ContactSection from '@/components/landing/contact-section'
 import PhotosSection from '@/components/landing/photo-section'
-import TextRow from '@/components/landing/text-row'
+import CreatorOfChaosScrollText from '@/components/landing/creatorofchaos-scroll-text'
 
 import {Header} from '@/components/header'
 import {Footer} from '@/components/footer'
@@ -47,7 +47,7 @@ export default function LandingPage() {
         <hr />
         <PhotosSection />
         <hr />
-        <TextRow />
+        <CreatorOfChaosScrollText />
       </main>
       <Footer hasScroll={true} />
     </div>

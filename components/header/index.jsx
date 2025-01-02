@@ -2,6 +2,7 @@
 import {useState, useEffect} from 'react'
 import {Link} from 'next-view-transitions'
 import {navLinks} from '@/lib/data'
+// import {ShiftNav} from './shift-nav'
 import ThemeToggle from './theme-toggle'
 
 export function Header({isSticky = false}) {
@@ -37,7 +38,22 @@ export function Header({isSticky = false}) {
           </Link>
         </div>
         <div className='flex flex-1 justify-center border 2xl:border-none'>
-          <ul className='inline-flex flex-wrap justify-center gap-1 text-xs text-foreground/70 sm:gap-2 sm:text-sm md:gap-3 lg:gap-4 lg:text-base 2xl:gap-5 2xl:text-lg'>
+          {/* <div className='hidden 2xl:block'>
+            <ShiftNav
+              items={[
+                'About',
+                'Calendar',
+                'Community',
+                'Blog',
+                'Contact',
+                'Social',
+                'Media Kit',
+                'FAQ',
+                'Store',
+              ]}
+            />
+          </div> */}
+          <ul className='inline-flex flex-wrap justify-center gap-1 text-xs text-foreground/70 sm:gap-2 sm:text-sm md:gap-3 lg:gap-4 lg:text-base'>
             {navLinks.map((link) => (
               <li key={link.href}>
                 {link.external ? (

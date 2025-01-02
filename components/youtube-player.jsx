@@ -1,6 +1,6 @@
 import {VideoDialog} from './ui/video-dialog'
 
-export function VideoPlayer() {
+export function YouTubePlayer() {
   return (
     <div className='relative'>
       <VideoDialog

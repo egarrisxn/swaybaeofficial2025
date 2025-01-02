@@ -1,5 +1,5 @@
 import {Button} from '@/components/ui/button'
-import {VideoPlayer} from '@/components/video-player'
+import {YouTubePlayer} from '@/components/youtube-player'
 
 export default function YouTubeSection() {
   return (
@@ -9,7 +9,7 @@ export default function YouTubeSection() {
           {/* Video Section */}
           <aside className='flex w-full items-center justify-center py-4 sm:px-4 lg:mt-1 lg:items-start lg:px-2 xl:px-4'>
             <div className='relative h-fit w-full max-w-xl overflow-hidden'>
-              <VideoPlayer />
+              <YouTubePlayer />
             </div>
           </aside>
           {/* Text Section */}
